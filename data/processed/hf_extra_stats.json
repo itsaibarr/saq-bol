@@ -1,0 +1,221 @@
+{
+ "n": 46697,
+ "label": {
+  "0": 33285,
+  "1": 13412
+ },
+ "dedup": {
+  "exact_or_norm_or_template_dups": 141743,
+  "label_conflicts": 12
+ },
+ "leak_dropped": {
+  "Bektemir96az96/Uzbek_and_Russian_Phishing_dataset": 0,
+  "BothBosu/Scammer-Conversation": 0,
+  "BothBosu/multi-agent-scam-conversation": 0,
+  "BothBosu/scam-dialogue": 0,
+  "BothBosu/single-agent-scam-conversations": 0,
+  "BothBosu/youtube-scam-conversations": 0,
+  "DmitryKRX/anti_spam_ru": 0,
+  "FredZhang7/all-scam-spam": 0,
+  "Ridham115/indian-scam-sms-synthetic-audited": 0,
+  "VusalShahbazovAz/smishing-AZ-SC": 0,
+  "anmolshrivastav/scam_ham_india_14_languages": 0,
+  "dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset": 0,
+  "flowxai/scamguardbench": 0,
+  "rasheq/scam-shield-sms": 0,
+  "shaw/scambench-training": 0,
+  "ysangam/Indian_Cyber_Scam_PhoneCall_Hinglish_Dataset": 0
+ },
+ "raw_after_filters": {
+  "Bektemir96az96/Uzbek_and_Russian_Phishing_dataset": {
+   "0": 50000,
+   "1": 50000
+  },
+  "BothBosu/Scammer-Conversation": {
+   "0": 2832,
+   "1": 2118
+  },
+  "BothBosu/multi-agent-scam-conversation": {
+   "0": 3651,
+   "1": 3161
+  },
+  "BothBosu/scam-dialogue": {
+   "0": 4374,
+   "1": 6795
+  },
+  "BothBosu/single-agent-scam-conversations": {
+   "0": 4682,
+   "1": 7059
+  },
+  "BothBosu/youtube-scam-conversations": {
+   "0": 0,
+   "1": 204
+  },
+  "DmitryKRX/anti_spam_ru": {
+   "0": 30966,
+   "1": 619
+  },
+  "FredZhang7/all-scam-spam": {
+   "0": 8198,
+   "1": 188
+  },
+  "Ridham115/indian-scam-sms-synthetic-audited": {
+   "0": 783,
+   "1": 797
+  },
+  "VusalShahbazovAz/smishing-AZ-SC": {
+   "0": 2940,
+   "1": 363
+  },
+  "anmolshrivastav/scam_ham_india_14_languages": {
+   "0": 7000,
+   "1": 7000
+  },
+  "dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset": {
+   "0": 516,
+   "1": 172
+  },
+  "flowxai/scamguardbench": {
+   "0": 226,
+   "1": 207
+  },
+  "rasheq/scam-shield-sms": {
+   "0": 9587,
+   "1": 9951
+  },
+  "shaw/scambench-training": {
+   "0": 290,
+   "1": 930
+  },
+  "ysangam/Indian_Cyber_Scam_PhoneCall_Hinglish_Dataset": {
+   "0": 5000,
+   "1": 5000
+  }
+ },
+ "by_source_label": {
+  "Bektemir96az96/Uzbek_and_Russian_Phishing_dataset|0": 7,
+  "Bektemir96az96/Uzbek_and_Russian_Phishing_dataset|1": 7,
+  "BothBosu/Scammer-Conversation|0": 692,
+  "BothBosu/Scammer-Conversation|1": 495,
+  "BothBosu/multi-agent-scam-conversation|0": 1098,
+  "BothBosu/multi-agent-scam-conversation|1": 1097,
+  "BothBosu/scam-dialogue|0": 1097,
+  "BothBosu/scam-dialogue|1": 1098,
+  "BothBosu/single-agent-scam-conversations|0": 1625,
+  "BothBosu/single-agent-scam-conversations|1": 569,
+  "BothBosu/youtube-scam-conversations|1": 204,
+  "DmitryKRX/anti_spam_ru|0": 14423,
+  "DmitryKRX/anti_spam_ru|1": 577,
+  "FredZhang7/all-scam-spam|0": 2061,
+  "FredZhang7/all-scam-spam|1": 161,
+  "Ridham115/indian-scam-sms-synthetic-audited|0": 783,
+  "Ridham115/indian-scam-sms-synthetic-audited|1": 797,
+  "VusalShahbazovAz/smishing-AZ-SC|0": 2913,
+  "VusalShahbazovAz/smishing-AZ-SC|1": 363,
+  "anmolshrivastav/scam_ham_india_14_languages|0": 3123,
+  "anmolshrivastav/scam_ham_india_14_languages|1": 2132,
+  "dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset|0": 498,
+  "dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset|1": 134,
+  "flowxai/scamguardbench|0": 212,
+  "flowxai/scamguardbench|1": 207,
+  "rasheq/scam-shield-sms|0": 4388,
+  "rasheq/scam-shield-sms|1": 4389,
+  "shaw/scambench-training|0": 265,
+  "shaw/scambench-training|1": 580,
+  "ysangam/Indian_Cyber_Scam_PhoneCall_Hinglish_Dataset|0": 100,
+  "ysangam/Indian_Cyber_Scam_PhoneCall_Hinglish_Dataset|1": 602
+ },
+ "by_lang_label": {
+  "ar|0": 25,
+  "ar|1": 53,
+  "as|0": 20,
+  "as|1": 20,
+  "az|0": 2913,
+  "az|1": 363,
+  "bn|0": 473,
+  "bn|1": 281,
+  "bn-Latn|0": 66,
+  "bn-Latn|1": 69,
+  "de|0": 22,
+  "de|1": 34,
+  "en|0": 11516,
+  "en|1": 8484,
+  "es|0": 31,
+  "es|1": 100,
+  "fr|0": 22,
+  "fr|1": 34,
+  "gu|0": 349,
+  "gu|1": 250,
+  "hi|0": 449,
+  "hi|1": 398,
+  "hi-Latn|0": 874,
+  "hi-Latn|1": 1216,
+  "ja|1": 2,
+  "kn|0": 20,
+  "kn|1": 20,
+  "ko|0": 27,
+  "ko|1": 72,
+  "ks|0": 356,
+  "ks|1": 227,
+  "mixed|0": 1,
+  "ml|0": 20,
+  "ml|1": 20,
+  "mr|0": 359,
+  "mr|1": 237,
+  "mr-Latn|0": 62,
+  "mr-Latn|1": 65,
+  "or|0": 19,
+  "or|1": 25,
+  "pa|0": 364,
+  "pa|1": 231,
+  "pt|0": 28,
+  "pt|1": 65,
+  "ro|0": 85,
+  "ro|1": 85,
+  "ru|0": 14969,
+  "ru|1": 773,
+  "ta|0": 13,
+  "ta|1": 25,
+  "ta-Latn|0": 61,
+  "ta-Latn|1": 64,
+  "te|0": 20,
+  "te|1": 20,
+  "te-Latn|0": 63,
+  "te-Latn|1": 62,
+  "th|0": 7,
+  "th|1": 34,
+  "tr|0": 20,
+  "tr|1": 36,
+  "uz|0": 4,
+  "uz|1": 4,
+  "vi|0": 27,
+  "vi|1": 38,
+  "zh|1": 5
+ },
+ "translate_pool": {
+  "n": 6000,
+  "label": {
+   "1": 3000,
+   "0": 3000
+  },
+  "lang": {
+   "en": 4650,
+   "ru": 1350
+  },
+  "source": {
+   "rasheq/scam-shield-sms": 2100,
+   "DmitryKRX/anti_spam_ru": 1300,
+   "BothBosu/scam-dialogue": 790,
+   "BothBosu/single-agent-scam-conversations": 627,
+   "BothBosu/Scammer-Conversation": 395,
+   "anmolshrivastav/scam_ham_india_14_languages": 300,
+   "Ridham115/indian-scam-sms-synthetic-audited": 153,
+   "FredZhang7/all-scam-spam": 107,
+   "BothBosu/multi-agent-scam-conversation": 79,
+   "flowxai/scamguardbench": 67,
+   "BothBosu/youtube-scam-conversations": 41,
+   "shaw/scambench-training": 39,
+   "Bektemir96az96/Uzbek_and_Russian_Phishing_dataset": 2
+  }
+ }
+}

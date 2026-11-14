@@ -1,0 +1,8 @@
+{
+ "mix": "data/processed/mix_v6b",
+ "members": [
+  "runs/kg_e5L_v6b_s1",
+  "runs/kg_e5L_v6b_s2"
+ ],
+ "method": "pct"
+}

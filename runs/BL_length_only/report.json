@@ -1,0 +1,531 @@
+{
+  "model": "BL_length_only",
+  "threshold": 0.2500000012691757,
+  "dev": {
+    "threshold": 0.2500000012691757,
+    "headline": {
+      "recall": {
+        "n": 114,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.03259969314741144
+        ],
+        "cluster_bootstrap95": [
+          0.0,
+          0.0
+        ]
+      },
+      "missed_scams_FN": 114,
+      "notification_fpr": {
+        "n": 45,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.07865426194064076
+        ]
+      },
+      "notification_false_alarms": 0,
+      "chat_fpr": {
+        "n": 848,
+        "k": 4,
+        "rate": 0.0047169811320754715,
+        "wilson95": [
+          0.0018357953100637424,
+          0.012065380683219516
+        ]
+      },
+      "chat_false_alarms_FP": 4,
+      "pr_auc_vs_chat": 0.10498293866785585,
+      "chat_prevalence": 0.11850311850311851
+    },
+    "recall_by_language": {
+      "kk": {
+        "n": 65,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.055803467670710726
+        ]
+      },
+      "mixed": {
+        "n": 1,
+        "k": 0,
+        "rate": null,
+        "note": "n<10, count only"
+      },
+      "ru": {
+        "n": 48,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0741026511527422
+        ]
+      }
+    },
+    "headline_self_contained": {
+      "recall": {
+        "n": 93,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0396689026203615
+        ]
+      },
+      "by_language": {
+        "kk": {
+          "n": 53,
+          "k": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.06758430445307662
+          ]
+        },
+        "ru": {
+          "n": 40,
+          "k": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.08762453925039232
+          ]
+        }
+      },
+      "recall_yes_only": {
+        "n": 61,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.05924591620194442
+        ]
+      },
+      "recall_not_self_contained": {
+        "n": 21,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.15464382326420195
+        ]
+      }
+    },
+    "chat_fpr_by_language": {
+      "en": {
+        "n": 61,
+        "k": 3,
+        "rate": 0.04918032786885246,
+        "wilson95": [
+          0.016865676835230686,
+          0.1349134279370143
+        ]
+      },
+      "kbd": {
+        "n": 12,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.2425007574992425
+        ]
+      },
+      "kk": {
+        "n": 235,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.016084300222406814
+        ]
+      },
+      "mixed": {
+        "n": 87,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.04228899535014795
+        ]
+      },
+      "ru": {
+        "n": 453,
+        "k": 1,
+        "rate": 0.002207505518763797,
+        "wilson95": [
+          0.0003897752431060303,
+          0.012397151341513231
+        ]
+      }
+    },
+    "secondary": {
+      "fragment_recall (<=4 words)": {
+        "n": 44,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          6.938893903907228e-18,
+          0.08029831778201396
+        ]
+      },
+      "advice_text_flag_rate (anti-fraud advice that quotes scams; stress test)": {
+        "n": 22,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          1.3877787807814457e-17,
+          0.14865952572596125
+        ]
+      },
+      "notification_flag_rate (real legit notifications)": {
+        "n": 45,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.07865426194064076
+        ]
+      },
+      "recall_novel_scheme": {
+        "n": 9,
+        "k": 0,
+        "rate": null,
+        "note": "n<10, count only"
+      },
+      "recall_seen_scheme": {
+        "n": 105,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.035295328256842964
+        ]
+      },
+      "recall_2026": {
+        "n": 65,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.055803467670710726
+        ]
+      },
+      "recall_before_2026": {
+        "n": 49,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.07270029673590504
+        ]
+      }
+    },
+    "kbd_paired": {
+      "original_recall": {
+        "n": 65,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.055803467670710726
+        ]
+      },
+      "folded_recall": {
+        "n": 65,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.055803467670710726
+        ]
+      },
+      "test": {
+        "n": 65,
+        "both": 0,
+        "only_first": 0,
+        "only_second": 0,
+        "neither": 65,
+        "mcnemar_p": 1.0
+      }
+    },
+    "kk_ru_pairs": {
+      "pairs": 13,
+      "test": {
+        "n": 13,
+        "both": 0,
+        "only_first": 0,
+        "only_second": 0,
+        "neither": 13,
+        "mcnemar_p": 1.0
+      },
+      "note": "only_first = caught in Kazakh only; only_second = caught in Russian only"
+    }
+  },
+  "test": {
+    "threshold": 0.2500000012691757,
+    "headline": {
+      "recall": {
+        "n": 254,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.014899069816507498
+        ],
+        "cluster_bootstrap95": [
+          0.0,
+          0.0
+        ]
+      },
+      "missed_scams_FN": 254,
+      "notification_fpr": {
+        "n": 69,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.05273909414400562
+        ]
+      },
+      "notification_false_alarms": 0,
+      "chat_fpr": {
+        "n": 1978,
+        "k": 15,
+        "rate": 0.007583417593528817,
+        "wilson95": [
+          0.004601004196399523,
+          0.012474830724009858
+        ]
+      },
+      "chat_false_alarms_FP": 15,
+      "pr_auc_vs_chat": 0.09105324611010956,
+      "chat_prevalence": 0.11379928315412187
+    },
+    "recall_by_language": {
+      "kk": {
+        "n": 146,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025637740120233635
+        ]
+      },
+      "ru": {
+        "n": 108,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          3.469446951953614e-18,
+          0.03434857870416731
+        ]
+      }
+    },
+    "headline_self_contained": {
+      "recall": {
+        "n": 216,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          1.734723475976807e-18,
+          0.017474399749637923
+        ]
+      },
+      "by_language": {
+        "kk": {
+          "n": 129,
+          "k": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.028918651988533713
+          ]
+        },
+        "ru": {
+          "n": 87,
+          "k": 0,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.04228899535014795
+          ]
+        }
+      },
+      "recall_yes_only": {
+        "n": 125,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.0298164567965626
+        ]
+      },
+      "recall_not_self_contained": {
+        "n": 38,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.09181293258383999
+        ]
+      }
+    },
+    "chat_fpr_by_language": {
+      "en": {
+        "n": 139,
+        "k": 11,
+        "rate": 0.07913669064748201,
+        "wilson95": [
+          0.044760817373266724,
+          0.13615006573081498
+        ]
+      },
+      "kbd": {
+        "n": 24,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.13798057582897535
+        ]
+      },
+      "kk": {
+        "n": 576,
+        "k": 2,
+        "rate": 0.003472222222222222,
+        "wilson95": [
+          0.0009527056381496138,
+          0.012570987729142419
+        ]
+      },
+      "mixed": {
+        "n": 192,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.019615852811660034
+        ]
+      },
+      "ru": {
+        "n": 1047,
+        "k": 2,
+        "rate": 0.0019102196752626551,
+        "wilson95": [
+          0.0005239965630255625,
+          0.006938212774709067
+        ]
+      }
+    },
+    "secondary": {
+      "fragment_recall (<=4 words)": {
+        "n": 149,
+        "k": 25,
+        "rate": 0.16778523489932887,
+        "wilson95": [
+          0.11630770351545355,
+          0.23596288250301267
+        ]
+      },
+      "advice_text_flag_rate (anti-fraud advice that quotes scams; stress test)": {
+        "n": 86,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.042759701519118086
+        ]
+      },
+      "notification_flag_rate (real legit notifications)": {
+        "n": 69,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.05273909414400562
+        ]
+      },
+      "recall_novel_scheme": {
+        "n": 32,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.1071827150573635
+        ]
+      },
+      "recall_seen_scheme": {
+        "n": 222,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.017010152248301463
+        ]
+      },
+      "recall_2026": {
+        "n": 159,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.023591023423989943
+        ]
+      },
+      "recall_before_2026": {
+        "n": 95,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.038866226366226365
+        ]
+      }
+    },
+    "kbd_paired": {
+      "original_recall": {
+        "n": 146,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025637740120233635
+        ]
+      },
+      "folded_recall": {
+        "n": 146,
+        "k": 0,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.025637740120233635
+        ]
+      },
+      "test": {
+        "n": 146,
+        "both": 0,
+        "only_first": 0,
+        "only_second": 0,
+        "neither": 146,
+        "mcnemar_p": 1.0
+      }
+    },
+    "kk_ru_pairs": {
+      "pairs": 45,
+      "test": {
+        "n": 45,
+        "both": 2,
+        "only_first": 1,
+        "only_second": 0,
+        "neither": 42,
+        "mcnemar_p": 1.0
+      },
+      "note": "only_first = caught in Kazakh only; only_second = caught in Russian only"
+    }
+  }
+}

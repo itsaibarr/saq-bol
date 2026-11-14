@@ -1,0 +1,8 @@
+{
+ "mix": "data/processed/mix_v5b",
+ "members": [
+  "runs/kg_e5L_v5b",
+  "runs/kg_horizon_v5b_s2"
+ ],
+ "method": "mean of chat-dev percentiles"
+}

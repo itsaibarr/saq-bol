@@ -1,0 +1,18 @@
+{
+ "mix": "data/processed/mix",
+ "model": "kz-transformers/kaz-roberta-conversational",
+ "name": "kg_kazrob_v6b",
+ "lr": 5e-05,
+ "epochs": 3,
+ "bs": 32,
+ "max_len": 96,
+ "seed": 1,
+ "scam_weight": 4.0,
+ "warmup": 0.06,
+ "wd": 0.01,
+ "prefix": "",
+ "out": "runs",
+ "num_labels": 2,
+ "pos_idx": 1,
+ "device": "cuda"
+}

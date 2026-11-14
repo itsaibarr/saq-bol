@@ -1,0 +1,41 @@
+{
+ "epoch": 3,
+ "train_loss": 0.009471704413155395,
+ "train_loss_last10pct": 0.00513604298743006,
+ "grad_norm_mean": Infinity,
+ "grad_norm_max": Infinity,
+ "nan_steps": 0,
+ "lr_end": 0.0,
+ "sec": 2108.8,
+ "syn_pr_auc": 0.9945,
+ "syn_logloss": 0.0908,
+ "dev_pr_auc_vs_chat": 0.9594,
+ "dev_thr_A4": 0.9997,
+ "dev_notif_fpr": 0.0667,
+ "dev_recall_at_1pct": 0.693,
+ "dev_fragment_recall": 0.2727,
+ "dev_advice_text_flag_rate": 0.0455,
+ "dev_recall_by_lang": {
+  "kk": 0.662,
+  "mixed": 0.0,
+  "ru": 0.75
+ },
+ "syn_recall_by_lang_at_thr": {
+  "en": 0.894,
+  "kbd": 0.941,
+  "kk": 0.92,
+  "mixed": 0.915,
+  "other": 0.992,
+  "ru": 0.967
+ },
+ "syn_fpr_by_lang_at_thr": {
+  "en": 0.007,
+  "kbd": 0.026,
+  "kk": 0.007,
+  "mixed": 0.008,
+  "other": 0.005,
+  "ru": 0.003
+ },
+ "dev_ap_vs_chat_notif": 0.943,
+ "select": 0.943
+}

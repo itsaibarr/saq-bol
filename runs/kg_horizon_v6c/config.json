@@ -1,0 +1,18 @@
+{
+ "mix": "data/processed/mix",
+ "model": "Horizon-Labs/phishing-scam-detector-base",
+ "name": "kg_horizon_v6c",
+ "lr": 1e-05,
+ "epochs": 2,
+ "bs": 32,
+ "max_len": 128,
+ "seed": 2,
+ "scam_weight": 4.0,
+ "warmup": 0.06,
+ "wd": 0.01,
+ "prefix": "",
+ "out": "runs",
+ "num_labels": 3,
+ "pos_idx": 2,
+ "device": "cuda"
+}

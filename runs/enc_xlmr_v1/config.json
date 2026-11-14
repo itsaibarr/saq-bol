@@ -1,0 +1,16 @@
+{
+ "mix": "data/processed/mix_v1",
+ "model": "FacebookAI/xlm-roberta-base",
+ "name": "enc_xlmr_v1",
+ "lr": 3e-05,
+ "epochs": 4,
+ "bs": 32,
+ "max_len": 128,
+ "seed": 1,
+ "scam_weight": 2.0,
+ "warmup": 0.06,
+ "wd": 0.01,
+ "prefix": "",
+ "out": "runs",
+ "device": "mps"
+}

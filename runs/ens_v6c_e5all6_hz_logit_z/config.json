@@ -1,0 +1,13 @@
+{
+ "mix": "data/processed/mix_v6c",
+ "members": [
+  "runs/kg_e5L_v6c_s1",
+  "runs/kg_e5L_v6c_s2",
+  "runs/kg_e5L_v6c_s3",
+  "runs/kg_e5L_v6c_e3_s4",
+  "runs/kg_e5L_v6c_e3_s5",
+  "runs/kg_e5L_v6c_e3_s6",
+  "runs/kg_horizon_v6c"
+ ],
+ "method": "logit_z"
+}

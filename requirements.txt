@@ -1,0 +1,10 @@
+torch>=2.4
+transformers>=5.0
+scikit-learn>=1.5
+pandas>=2.2
+numpy
+scipy
+matplotlib
+gradio>=6.0
+huggingface_hub
+sentence-transformers

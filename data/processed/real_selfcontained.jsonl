@@ -1,0 +1,578 @@
+{"id": "ru_001", "self_contained": "yes", "why": "asks to enter code to cancel loan"}
+{"id": "ru_002", "self_contained": "yes", "why": "card blocked, urgent link click"}
+{"id": "ru_003", "self_contained": "yes", "why": "parcel phishing link with deadline"}
+{"id": "ru_004", "self_contained": "no", "why": "ordinary delivery follow-up"}
+{"id": "ru_005", "self_contained": "maybe", "why": "parcel address error, smishing-like"}
+{"id": "ru_006", "self_contained": "yes", "why": "parcel phishing, confirm via link"}
+{"id": "ru_007", "self_contained": "maybe", "why": "reopen link to activate"}
+{"id": "ru_008", "self_contained": "maybe", "why": "bare suspicious link domain"}
+{"id": "ru_009", "self_contained": "no", "why": "neutral approval notice"}
+{"id": "ru_010", "self_contained": "maybe", "why": "confirm loan you may not want"}
+{"id": "ru_011", "self_contained": "yes", "why": "link click to take loan"}
+{"id": "ru_012", "self_contained": "maybe", "why": "vote request, known hook but benign"}
+{"id": "ru_013", "self_contained": "no", "why": "neutral contest mention"}
+{"id": "ru_014", "self_contained": "yes", "why": "asks to send money"}
+{"id": "ru_015", "self_contained": "yes", "why": "urgent money transfer, blocked account"}
+{"id": "ru_016", "self_contained": "maybe", "why": "photo lure, no ask"}
+{"id": "ru_017", "self_contained": "yes", "why": "asks to tell SMS code"}
+{"id": "ru_023", "self_contained": "yes", "why": "code for loan cancellation"}
+{"id": "ru_024", "self_contained": "maybe", "why": "claims government office, mild"}
+{"id": "ru_025", "self_contained": "yes", "why": "asks to dictate code"}
+{"id": "ru_026", "self_contained": "no", "why": "neutral loan status notice"}
+{"id": "ru_027", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "ru_028", "self_contained": "maybe", "why": "SIM expiry alarm"}
+{"id": "ru_029", "self_contained": "maybe", "why": "fine notice, no ask"}
+{"id": "ru_030", "self_contained": "maybe", "why": "unsolicited payout claim"}
+{"id": "ru_031", "self_contained": "no", "why": "bare parcel delay"}
+{"id": "ru_032", "self_contained": "no", "why": "ordinary delivery confirmation"}
+{"id": "ru_033", "self_contained": "yes", "why": "asks data and link click"}
+{"id": "ru_034", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "ru_035", "self_contained": "yes", "why": "unsolicited gift win"}
+{"id": "ru_036", "self_contained": "no", "why": "neutral census statement"}
+{"id": "ru_037", "self_contained": "maybe", "why": "account block threat"}
+{"id": "ru_039", "self_contained": "maybe", "why": "store claims gift, vague"}
+{"id": "ru_040", "self_contained": "maybe", "why": "urgent tax payment pressure"}
+{"id": "ru_041", "self_contained": "yes", "why": "transfer money to other account"}
+{"id": "ru_042", "self_contained": "yes", "why": "police impersonation, don't hang up"}
+{"id": "ru_043", "self_contained": "yes", "why": "secrecy, secret operation pressure"}
+{"id": "ru_044", "self_contained": "maybe", "why": "code word change notice"}
+{"id": "ru_045", "self_contained": "yes", "why": "operator impersonation, asks code"}
+{"id": "ru_046", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "ru_047", "self_contained": "yes", "why": "security service asks card data"}
+{"id": "ru_048", "self_contained": "yes", "why": "relative in trouble, transfer money"}
+{"id": "ru_049", "self_contained": "yes", "why": "prize requires paying fee"}
+{"id": "ru_050", "self_contained": "yes", "why": "asks SMS code to stop debit"}
+{"id": "ru_051", "self_contained": "no", "why": "bare time statement"}
+{"id": "ru_052", "self_contained": "maybe", "why": "account block threat"}
+{"id": "ru_053", "self_contained": "maybe", "why": "loan being processed alarm"}
+{"id": "ru_054", "self_contained": "maybe", "why": "urgent confirm operation"}
+{"id": "ru_055", "self_contained": "maybe", "why": "keep line open, odd"}
+{"id": "ru_056", "self_contained": "maybe", "why": "secrecy claim alone"}
+{"id": "ru_057", "self_contained": "maybe", "why": "alarmist money theft claim"}
+{"id": "ru_058", "self_contained": "maybe", "why": "criminal case claim"}
+{"id": "ru_059", "self_contained": "maybe", "why": "alarming accusation, no ask"}
+{"id": "ru_060", "self_contained": "maybe", "why": "account used by fraudsters claim"}
+{"id": "ru_061", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "ru_062", "self_contained": "maybe", "why": "suspicious operation notice"}
+{"id": "ru_063", "self_contained": "maybe", "why": "urgent identity confirmation"}
+{"id": "ru_064", "self_contained": "maybe", "why": "confirm account, phishing-like"}
+{"id": "ru_065", "self_contained": "maybe", "why": "unsolicited payout claim"}
+{"id": "ru_066", "self_contained": "yes", "why": "link click to protect account"}
+{"id": "ru_067", "self_contained": "no", "why": "neutral residence question"}
+{"id": "ru_068", "self_contained": "no", "why": "neutral payment question"}
+{"id": "ru_069", "self_contained": "yes", "why": "prize claim offer"}
+{"id": "ru_070", "self_contained": "no", "why": "neutral confirmation question"}
+{"id": "ru_071", "self_contained": "yes", "why": "relative in trouble needs money"}
+{"id": "ru_072", "self_contained": "maybe", "why": "relative accident shock, no ask"}
+{"id": "ru_073", "self_contained": "yes", "why": "accident, send money"}
+{"id": "ru_074", "self_contained": "maybe", "why": "OLX payment offer, ambiguous"}
+{"id": "ru_075", "self_contained": "maybe", "why": "buyer deposit, remove listing"}
+{"id": "ru_076", "self_contained": "no", "why": "bare agency name"}
+{"id": "ru_077", "self_contained": "yes", "why": "profitable investment promise"}
+{"id": "ru_078", "self_contained": "maybe", "why": "investment slogan"}
+{"id": "ru_079", "self_contained": "no", "why": "bare program name"}
+{"id": "ru_080", "self_contained": "maybe", "why": "investment promise, vague"}
+{"id": "ru_081", "self_contained": "no", "why": "neutral platform phrase"}
+{"id": "ru_082", "self_contained": "no", "why": "bare brand name"}
+{"id": "ru_083", "self_contained": "yes", "why": "describes bank-impersonation fraud"}
+{"id": "ru_084", "self_contained": "yes", "why": "describes WhatsApp bank fraud"}
+{"id": "ru_085", "self_contained": "yes", "why": "describes payout fraud scheme"}
+{"id": "ru_086", "self_contained": "yes", "why": "describes fake investigation fraud"}
+{"id": "ru_087", "self_contained": "yes", "why": "describes fake utility code fraud"}
+{"id": "ru_088", "self_contained": "yes", "why": "describes voice-clone relative fraud"}
+{"id": "ru_089", "self_contained": "yes", "why": "describes antispam SMS code fraud"}
+{"id": "ru_090", "self_contained": "yes", "why": "describes mirror loan, safe account"}
+{"id": "ru_091", "self_contained": "no", "why": "ordinary e-signature reminder"}
+{"id": "ru_123", "self_contained": "yes", "why": "give money to state, absurd"}
+{"id": "ru_124", "self_contained": "no", "why": "bare job title"}
+{"id": "ru_125", "self_contained": "no", "why": "bare job title"}
+{"id": "kk_001", "self_contained": "no", "why": "neutral bank call mention"}
+{"id": "kk_002", "self_contained": "maybe", "why": "suspicious operation alarm"}
+{"id": "kk_003", "self_contained": "maybe", "why": "account threat alarm"}
+{"id": "kk_004", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "kk_005", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "kk_006", "self_contained": "maybe", "why": "urgent loan cancel pressure"}
+{"id": "kk_007", "self_contained": "maybe", "why": "secrecy request alone"}
+{"id": "kk_008", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk_009", "self_contained": "yes", "why": "install app to protect account"}
+{"id": "kk_010", "self_contained": "maybe", "why": "follow instructions on second phone"}
+{"id": "kk_011", "self_contained": "maybe", "why": "screen sharing request"}
+{"id": "kk_012", "self_contained": "maybe", "why": "show screen via video call"}
+{"id": "kk_013", "self_contained": "maybe", "why": "verify yourself via video"}
+{"id": "kk_014", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "kk_015", "self_contained": "maybe", "why": "protected account opened claim"}
+{"id": "kk_016", "self_contained": "maybe", "why": "preserve money during investigation"}
+{"id": "kk_017", "self_contained": "maybe", "why": "secrecy request alone"}
+{"id": "kk_018", "self_contained": "maybe", "why": "follow instructions, keep phone on"}
+{"id": "kk_019", "self_contained": "yes", "why": "take loan to beat scammers"}
+{"id": "kk_020", "self_contained": "yes", "why": "transfer money via app"}
+{"id": "kk_021", "self_contained": "yes", "why": "transfer deposit to other account"}
+{"id": "kk_022", "self_contained": "yes", "why": "police impersonation, don't hang up"}
+{"id": "kk_023", "self_contained": "yes", "why": "secret operation, tell no one"}
+{"id": "kk_024", "self_contained": "maybe", "why": "code word change notice"}
+{"id": "kk_025", "self_contained": "yes", "why": "operator impersonation, asks code"}
+{"id": "kk_026", "self_contained": "yes", "why": "transfer to protected bank account"}
+{"id": "kk_027", "self_contained": "yes", "why": "security service asks card data"}
+{"id": "kk_028", "self_contained": "no", "why": "bare self-identification"}
+{"id": "kk_029", "self_contained": "no", "why": "bare self-identification"}
+{"id": "kk_030", "self_contained": "no", "why": "bare self-identification"}
+{"id": "kk_031", "self_contained": "yes", "why": "asks code for parcel"}
+{"id": "kk_032", "self_contained": "no", "why": "ordinary meter check notice"}
+{"id": "kk_033", "self_contained": "yes", "why": "data leak alarm, urgent action"}
+{"id": "kk_034", "self_contained": "no", "why": "neutral loan cancelled notice"}
+{"id": "kk_035", "self_contained": "yes", "why": "secrecy plus criminal case threat"}
+{"id": "kk_036", "self_contained": "yes", "why": "terrorism accusation, arrest threat"}
+{"id": "kk_037", "self_contained": "maybe", "why": "vote request, known hook"}
+{"id": "kk_038", "self_contained": "maybe", "why": "vote request, known hook"}
+{"id": "kk_039", "self_contained": "maybe", "why": "suspicious transactions alarm"}
+{"id": "kk_040", "self_contained": "maybe", "why": "fraudsters accessing cabinet alarm"}
+{"id": "kk_041", "self_contained": "maybe", "why": "money stolen alarm"}
+{"id": "kk_042", "self_contained": "maybe", "why": "mistaken transfer, return money"}
+{"id": "kk_043", "self_contained": "yes", "why": "link referrals for prize"}
+{"id": "kk_044", "self_contained": "no", "why": "vague payment promise"}
+{"id": "kk_045", "self_contained": "no", "why": "vague payment statement"}
+{"id": "kk_046", "self_contained": "no", "why": "vague payment extension"}
+{"id": "kk_047", "self_contained": "yes", "why": "promises recovery of lost money"}
+{"id": "kk_048", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "kk_049", "self_contained": "yes", "why": "unsolicited lottery win"}
+{"id": "kk_050", "self_contained": "yes", "why": "invest now, big profit"}
+{"id": "kk_051", "self_contained": "no", "why": "neutral charity-like statement"}
+{"id": "kk_057", "self_contained": "maybe", "why": "suspicious card transactions alarm"}
+{"id": "kk_058", "self_contained": "yes", "why": "urgent transfer to temporary account"}
+{"id": "kk_059", "self_contained": "yes", "why": "urgent request for personal data"}
+{"id": "kk_060", "self_contained": "yes", "why": "asks SMS code to unblock"}
+{"id": "kk_061", "self_contained": "no", "why": "ordinary post delivery call"}
+{"id": "kk_062", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk_063", "self_contained": "no", "why": "neutral residence question"}
+{"id": "kk_064", "self_contained": "no", "why": "neutral payment question"}
+{"id": "kk_065", "self_contained": "yes", "why": "prize claim offer"}
+{"id": "kk_066", "self_contained": "no", "why": "neutral hearing check"}
+{"id": "kk_067", "self_contained": "no", "why": "neutral confirmation question"}
+{"id": "kk_068", "self_contained": "yes", "why": "transfer to other account"}
+{"id": "kk_069", "self_contained": "yes", "why": "secret operation, tell no one"}
+{"id": "kk_070", "self_contained": "no", "why": "bare police self-identification"}
+{"id": "kk_071", "self_contained": "maybe", "why": "relative accident, no ask"}
+{"id": "kk_072", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "kk_073", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk_074", "self_contained": "maybe", "why": "money theft alarm"}
+{"id": "kk_075", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk_076", "self_contained": "yes", "why": "secret investigation recruitment"}
+{"id": "kk_077", "self_contained": "maybe", "why": "loan application alarm"}
+{"id": "kk_078", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "kk_079", "self_contained": "maybe", "why": "card/SIM expiry alarm"}
+{"id": "kk_080", "self_contained": "no", "why": "bare self-identification"}
+{"id": "kk_081", "self_contained": "no", "why": "bare self-identification"}
+{"id": "kk_082", "self_contained": "yes", "why": "quick investment profit promise"}
+{"id": "kk_083", "self_contained": "maybe", "why": "National Bank caller, unusual"}
+{"id": "kk_084", "self_contained": "maybe", "why": "secret op against bank manager"}
+{"id": "kk_085", "self_contained": "maybe", "why": "fixer promises state housing"}
+{"id": "kk_086", "self_contained": "no", "why": "ordinary meter registration"}
+{"id": "kk_087", "self_contained": "maybe", "why": "account block threat"}
+{"id": "kk_088", "self_contained": "maybe", "why": "suspicious operation notice"}
+{"id": "kk_125", "self_contained": "yes", "why": "describes bank-impersonating scammers"}
+{"id": "kk_126", "self_contained": "yes", "why": "describes WhatsApp bank-logo scammers"}
+{"id": "kk_127", "self_contained": "yes", "why": "describes payout-promise scammers"}
+{"id": "kk_128", "self_contained": "yes", "why": "describes fake investigation scheme"}
+{"id": "kk_129", "self_contained": "maybe", "why": "describes utility caller, no fraud cue"}
+{"id": "kk_130", "self_contained": "yes", "why": "describes voice-faking relative scheme"}
+{"id": "kk_131", "self_contained": "yes", "why": "debunks fake payout link scheme"}
+{"id": "kk_132", "self_contained": "yes", "why": "describes impersonation bonus scam"}
+{"id": "ru2_001", "self_contained": "yes", "why": "promises recovery of stolen money"}
+{"id": "ru2_002", "self_contained": "yes", "why": "promises full money recovery"}
+{"id": "ru2_003", "self_contained": "no", "why": "vague neutral statement"}
+{"id": "ru2_004", "self_contained": "yes", "why": "asks to name code"}
+{"id": "ru2_005", "self_contained": "maybe", "why": "money theft urgency alarm"}
+{"id": "ru2_006", "self_contained": "yes", "why": "urgent money transfer request"}
+{"id": "ru2_007", "self_contained": "no", "why": "bare time statement"}
+{"id": "ru2_008", "self_contained": "yes", "why": "transfer money or account blocked"}
+{"id": "ru2_009", "self_contained": "yes", "why": "asks to send code"}
+{"id": "ru2_010", "self_contained": "maybe", "why": "money withdrawal alarm"}
+{"id": "ru2_011", "self_contained": "yes", "why": "asks SMS code to cancel"}
+{"id": "ru2_012", "self_contained": "maybe", "why": "account block countdown"}
+{"id": "ru2_013", "self_contained": "maybe", "why": "suspicious operation notice"}
+{"id": "ru2_014", "self_contained": "maybe", "why": "urgent identity confirmation"}
+{"id": "ru2_015", "self_contained": "maybe", "why": "number used by fraudsters claim"}
+{"id": "ru2_016", "self_contained": "yes", "why": "transfer to protected account"}
+{"id": "ru2_017", "self_contained": "maybe", "why": "reserve account by investigator"}
+{"id": "ru2_018", "self_contained": "yes", "why": "unsolicited gift win"}
+{"id": "ru2_019", "self_contained": "yes", "why": "parcel phishing link"}
+{"id": "ru2_020", "self_contained": "yes", "why": "pay fee for redelivery"}
+{"id": "ru2_021", "self_contained": "maybe", "why": "confirm phone for order"}
+{"id": "ru2_022", "self_contained": "yes", "why": "asks code for gift"}
+{"id": "ru2_023", "self_contained": "yes", "why": "parcel link with return threat"}
+{"id": "ru2_024", "self_contained": "maybe", "why": "suspicious operation notice"}
+{"id": "ru2_025", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "ru2_026", "self_contained": "yes", "why": "asks to install app"}
+{"id": "ru2_027", "self_contained": "yes", "why": "loan status via link"}
+{"id": "ru2_028", "self_contained": "yes", "why": "urgent money transfer request"}
+{"id": "ru2_029", "self_contained": "yes", "why": "asks payment for delivery"}
+{"id": "ru2_030", "self_contained": "no", "why": "generic urging phrase"}
+{"id": "ru2_031", "self_contained": "maybe", "why": "liability threat"}
+{"id": "ru2_032", "self_contained": "no", "why": "bare don't hang up"}
+{"id": "ru2_033", "self_contained": "yes", "why": "unsolicited iPhone win"}
+{"id": "ru2_034", "self_contained": "maybe", "why": "vote request, known hook"}
+{"id": "ru2_035", "self_contained": "maybe", "why": "photo lure, no ask"}
+{"id": "ru2_036", "self_contained": "yes", "why": "asks to dictate one-time code"}
+{"id": "ru2_037", "self_contained": "no", "why": "neutral wrong number remark"}
+{"id": "ru2_038", "self_contained": "yes", "why": "new number, urgent money ask"}
+{"id": "ru2_039", "self_contained": "maybe", "why": "photo lure, no ask"}
+{"id": "ru2_040", "self_contained": "maybe", "why": "photo lure, likely attachment"}
+{"id": "ru2_041", "self_contained": "no", "why": "argumentative remark"}
+{"id": "ru2_042", "self_contained": "yes", "why": "pressure to deposit money today"}
+{"id": "ru2_043", "self_contained": "no", "why": "pleading not to hang up"}
+{"id": "ru2_044", "self_contained": "maybe", "why": "pushes victim to ATM"}
+{"id": "ru2_045", "self_contained": "maybe", "why": "pushes victim to ATM"}
+{"id": "ru2_046", "self_contained": "no", "why": "reassurance, no ask"}
+{"id": "ru2_047", "self_contained": "maybe", "why": "number expiry, extend prompt"}
+{"id": "ru2_048", "self_contained": "no", "why": "neutral term question"}
+{"id": "ru2_049", "self_contained": "yes", "why": "asks to read SMS number"}
+{"id": "ru2_050", "self_contained": "maybe", "why": "re-check SMS number"}
+{"id": "ru2_051", "self_contained": "no", "why": "neutral remark"}
+{"id": "ru2_052", "self_contained": "maybe", "why": "odd money responsibility claim"}
+{"id": "ru2_053", "self_contained": "no", "why": "neutral statement"}
+{"id": "ru2_054", "self_contained": "maybe", "why": "discourages police involvement"}
+{"id": "ru2_055", "self_contained": "no", "why": "ordinary dismissive talk"}
+{"id": "ru2_056", "self_contained": "no", "why": "insult"}
+{"id": "ru2_057", "self_contained": "no", "why": "neutral claim of identity"}
+{"id": "ru2_058", "self_contained": "no", "why": "threat to call police"}
+{"id": "ru2_059", "self_contained": "no", "why": "insult"}
+{"id": "ru2_060", "self_contained": "no", "why": "neutral exclamation"}
+{"id": "ru2_061", "self_contained": "no", "why": "aggressive remark"}
+{"id": "ru2_062", "self_contained": "maybe", "why": "card blocked notice"}
+{"id": "ru2_063", "self_contained": "maybe", "why": "suspicious transactions notice"}
+{"id": "ru2_064", "self_contained": "maybe", "why": "urgent data confirmation"}
+{"id": "ru2_065", "self_contained": "yes", "why": "lottery car win via link"}
+{"id": "ru2_066", "self_contained": "maybe", "why": "account hacked, confirm identity"}
+{"id": "ru2_067", "self_contained": "maybe", "why": "mistaken transfer, return money"}
+{"id": "ru2_068", "self_contained": "yes", "why": "asks 4-digit SMS code"}
+{"id": "ru2_069", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "ru2_070", "self_contained": "no", "why": "neutral utility call opener"}
+{"id": "ru2_071", "self_contained": "no", "why": "ordinary meter registration"}
+{"id": "ru2_072", "self_contained": "no", "why": "neutral application question"}
+{"id": "ru2_073", "self_contained": "no", "why": "ordinary document update"}
+{"id": "ru2_074", "self_contained": "no", "why": "bare debt notice"}
+{"id": "ru2_075", "self_contained": "maybe", "why": "unsolicited benefit offer"}
+{"id": "ru2_076", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "ru2_077", "self_contained": "yes", "why": "asks to forward code"}
+{"id": "ru2_078", "self_contained": "maybe", "why": "wrong number setup for code"}
+{"id": "ru2_079", "self_contained": "no", "why": "neutral security check"}
+{"id": "ru2_080", "self_contained": "maybe", "why": "video lure, no ask"}
+{"id": "ru2_081", "self_contained": "yes", "why": "asks to lend money"}
+{"id": "ru2_082", "self_contained": "maybe", "why": "relative emergency, no ask"}
+{"id": "ru2_083", "self_contained": "maybe", "why": "relative trouble plus secrecy"}
+{"id": "ru2_084", "self_contained": "maybe", "why": "account deletion threat"}
+{"id": "ru2_085", "self_contained": "no", "why": "bare delivery failure"}
+{"id": "ru2_086", "self_contained": "no", "why": "ordinary address confirmation"}
+{"id": "ru2_087", "self_contained": "maybe", "why": "scareware infection claim"}
+{"id": "ru2_088", "self_contained": "maybe", "why": "data leak alarm"}
+{"id": "ru2_089", "self_contained": "yes", "why": "urgent protection app install"}
+{"id": "ru2_093", "self_contained": "maybe", "why": "odd anti-fraud meeting offer"}
+{"id": "ru2_094", "self_contained": "maybe", "why": "asks bank details, pretext"}
+{"id": "ru2_095", "self_contained": "no", "why": "vague remark"}
+{"id": "ru2_096", "self_contained": "no", "why": "shocking statement, no ask"}
+{"id": "ru2_097", "self_contained": "maybe", "why": "follow instructions on second phone"}
+{"id": "ru2_098", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "ru2_099", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "ru2_100", "self_contained": "maybe", "why": "show screen via video"}
+{"id": "ru2_101", "self_contained": "maybe", "why": "secrecy request alone"}
+{"id": "ru2_102", "self_contained": "maybe", "why": "fake antifraud hold message"}
+{"id": "ru2_103", "self_contained": "no", "why": "neutral greeting"}
+{"id": "ru2_104", "self_contained": "no", "why": "insulting remark"}
+{"id": "ru2_105", "self_contained": "maybe", "why": "relative accident, no ask"}
+{"id": "ru2_106", "self_contained": "yes", "why": "take loan, send money"}
+{"id": "ru2_107", "self_contained": "no", "why": "vague cooperation phrase"}
+{"id": "ru2_108", "self_contained": "maybe", "why": "court threat for disrupting operation"}
+{"id": "ru2_109", "self_contained": "yes", "why": "relative accident, send money"}
+{"id": "ru2_110", "self_contained": "maybe", "why": "relative accident, no ask"}
+{"id": "ru2_111", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "ru2_112", "self_contained": "yes", "why": "unsolicited 2M tenge win"}
+{"id": "ru2_113", "self_contained": "no", "why": "neutral identity claim"}
+{"id": "ru2_114", "self_contained": "yes", "why": "put money in safe account"}
+{"id": "ru2_115", "self_contained": "yes", "why": "go to bank, take loan"}
+{"id": "ru2_116", "self_contained": "maybe", "why": "suspicious operations alarm"}
+{"id": "ru2_117", "self_contained": "no", "why": "ordinary sale talk"}
+{"id": "ru2_118", "self_contained": "yes", "why": "coaches lying about transfer"}
+{"id": "ru2_119", "self_contained": "maybe", "why": "unsolicited courier gift"}
+{"id": "ru2_120", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "ru2_121", "self_contained": "yes", "why": "off-platform card transfer ask"}
+{"id": "ru2_122", "self_contained": "maybe", "why": "direct payment request"}
+{"id": "ru2_123", "self_contained": "no", "why": "neutral loan approval notice"}
+{"id": "ru2_124", "self_contained": "maybe", "why": "urgent tax payment"}
+{"id": "ru2_125", "self_contained": "maybe", "why": "tax debt collection warning"}
+{"id": "ru2_126", "self_contained": "maybe", "why": "account threat alarm"}
+{"id": "ru2_127", "self_contained": "maybe", "why": "account block threat"}
+{"id": "ru2_128", "self_contained": "maybe", "why": "press START to confirm"}
+{"id": "ru2_129", "self_contained": "maybe", "why": "card owners wanted, odd"}
+{"id": "ru2_130", "self_contained": "yes", "why": "easy home income promise"}
+{"id": "ru2_131", "self_contained": "yes", "why": "money mule commission offer"}
+{"id": "ru2_132", "self_contained": "yes", "why": "rent out your card"}
+{"id": "ru2_133", "self_contained": "maybe", "why": "card owners wanted, odd"}
+{"id": "ru2_134", "self_contained": "yes", "why": "unsolicited smartphone win"}
+{"id": "ru2_135", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "ru2_136", "self_contained": "maybe", "why": "account blocked notice"}
+{"id": "ru2_137", "self_contained": "no", "why": "ordinary tariff ad"}
+{"id": "ru2_138", "self_contained": "no", "why": "generic urgency"}
+{"id": "ru2_139", "self_contained": "no", "why": "bare price remark"}
+{"id": "ru2_140", "self_contained": "no", "why": "ordinary rental ad"}
+{"id": "ru2_141", "self_contained": "no", "why": "neutral owner remark"}
+{"id": "ru2_142", "self_contained": "no", "why": "generic marketing phrase"}
+{"id": "ru2_143", "self_contained": "no", "why": "generic marketing phrase"}
+{"id": "ru2_144", "self_contained": "maybe", "why": "urgent scan request"}
+{"id": "ru2_145", "self_contained": "no", "why": "generic marketing phrase"}
+{"id": "ru2_146", "self_contained": "yes", "why": "unsolicited lottery win"}
+{"id": "ru2_228", "self_contained": "maybe", "why": "relative trouble, implied money"}
+{"id": "ru2_229", "self_contained": "yes", "why": "relative urgent money transfer"}
+{"id": "ru2_230", "self_contained": "yes", "why": "money mule card request"}
+{"id": "ru2_231", "self_contained": "yes", "why": "money mule transfer offer"}
+{"id": "ru2_232", "self_contained": "yes", "why": "easy daily income promise"}
+{"id": "ru2_233", "self_contained": "yes", "why": "pay fee to withdraw"}
+{"id": "ru2_234", "self_contained": "yes", "why": "extra payment to activate account"}
+{"id": "ru2_235", "self_contained": "maybe", "why": "generic scarcity pitch"}
+{"id": "ru2_236", "self_contained": "yes", "why": "urgency plus profit promise"}
+{"id": "ru2_237", "self_contained": "maybe", "why": "insurance fee request"}
+{"id": "ru2_238", "self_contained": "yes", "why": "invest more, earn more"}
+{"id": "ru2_239", "self_contained": "yes", "why": "pay fee to unblock"}
+{"id": "ru2_240", "self_contained": "yes", "why": "multiply money in days"}
+{"id": "ru2_241", "self_contained": "maybe", "why": "limited spots urgency"}
+{"id": "ru2_242", "self_contained": "yes", "why": "invest today, profit tomorrow"}
+{"id": "ru2_243", "self_contained": "maybe", "why": "prepayment for delivery"}
+{"id": "ru2_244", "self_contained": "no", "why": "neutral courier remark"}
+{"id": "ru2_245", "self_contained": "maybe", "why": "odd urgent key paperwork"}
+{"id": "ru2_246", "self_contained": "no", "why": "neutral housing queue news"}
+{"id": "ru2_247", "self_contained": "no", "why": "neutral flower delivery"}
+{"id": "ru2_248", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "ru2_249", "self_contained": "maybe", "why": "gift needs your address"}
+{"id": "ru2_250", "self_contained": "maybe", "why": "curse claim, fortune-teller hook"}
+{"id": "ru2_251", "self_contained": "maybe", "why": "money rescue claim"}
+{"id": "kk2_001", "self_contained": "yes", "why": "transfer to other account"}
+{"id": "kk2_002", "self_contained": "yes", "why": "police impersonation, don't hang up"}
+{"id": "kk2_003", "self_contained": "yes", "why": "secret operation, tell no one"}
+{"id": "kk2_004", "self_contained": "maybe", "why": "code word change notice"}
+{"id": "kk2_005", "self_contained": "yes", "why": "operator impersonation, asks code"}
+{"id": "kk2_006", "self_contained": "yes", "why": "transfer deposit funds request"}
+{"id": "kk2_007", "self_contained": "yes", "why": "security service asks card data"}
+{"id": "kk2_008", "self_contained": "yes", "why": "relative in trouble, send money"}
+{"id": "kk2_009", "self_contained": "yes", "why": "prize requires paying fee"}
+{"id": "kk2_010", "self_contained": "yes", "why": "asks SMS code to stop debit"}
+{"id": "kk2_011", "self_contained": "yes", "why": "relative urgent money transfer"}
+{"id": "kk2_012", "self_contained": "maybe", "why": "relative trouble, no ask"}
+{"id": "kk2_013", "self_contained": "maybe", "why": "gift needs your address"}
+{"id": "kk2_014", "self_contained": "no", "why": "ordinary tax notice"}
+{"id": "kk2_015", "self_contained": "maybe", "why": "identity confirmation request"}
+{"id": "kk2_016", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "kk2_017", "self_contained": "maybe", "why": "account hacked alarm"}
+{"id": "kk2_018", "self_contained": "maybe", "why": "pay now or lose it"}
+{"id": "kk2_019", "self_contained": "no", "why": "ordinary booking urgency"}
+{"id": "kk2_020", "self_contained": "no", "why": "neutral document remark"}
+{"id": "kk2_021", "self_contained": "no", "why": "vague legality reassurance"}
+{"id": "kk2_022", "self_contained": "no", "why": "bare realtor claim"}
+{"id": "kk2_023", "self_contained": "maybe", "why": "odd urgent key paperwork"}
+{"id": "kk2_024", "self_contained": "no", "why": "neutral housing queue news"}
+{"id": "kk2_025", "self_contained": "no", "why": "neutral utility opener"}
+{"id": "kk2_026", "self_contained": "no", "why": "ordinary document update"}
+{"id": "kk2_027", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk2_028", "self_contained": "maybe", "why": "stacked utility pretexts"}
+{"id": "kk2_029", "self_contained": "maybe", "why": "prepayment for delivery"}
+{"id": "kk2_030", "self_contained": "no", "why": "neutral courier remark"}
+{"id": "kk2_031", "self_contained": "no", "why": "neutral item ready"}
+{"id": "kk2_032", "self_contained": "yes", "why": "multiply money in days"}
+{"id": "kk2_033", "self_contained": "yes", "why": "invest more, earn more"}
+{"id": "kk2_034", "self_contained": "yes", "why": "pay fee to unblock"}
+{"id": "kk2_035", "self_contained": "yes", "why": "guaranteed high income promise"}
+{"id": "kk2_036", "self_contained": "yes", "why": "pay fee to withdraw"}
+{"id": "kk2_037", "self_contained": "maybe", "why": "insurance fee request"}
+{"id": "kk2_038", "self_contained": "yes", "why": "extra payment to activate account"}
+{"id": "kk2_039", "self_contained": "maybe", "why": "generic scarcity pitch"}
+{"id": "kk2_040", "self_contained": "yes", "why": "urgency plus profit promise"}
+{"id": "kk2_041", "self_contained": "maybe", "why": "curse claim, fortune-teller hook"}
+{"id": "kk2_042", "self_contained": "maybe", "why": "evil-eye removal offer"}
+{"id": "kk2_043", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "kk2_044", "self_contained": "yes", "why": "urgent app install"}
+{"id": "kk2_045", "self_contained": "no", "why": "neutral security update"}
+{"id": "kk2_046", "self_contained": "maybe", "why": "child danger alarm"}
+{"id": "kk2_047", "self_contained": "yes", "why": "asks to send money"}
+{"id": "kk2_048", "self_contained": "maybe", "why": "romance gift setup"}
+{"id": "kk2_049", "self_contained": "no", "why": "neutral salary remark"}
+{"id": "kk2_050", "self_contained": "maybe", "why": "trouble abroad, implied ask"}
+{"id": "kk2_051", "self_contained": "no", "why": "neutral blocked accounts remark"}
+{"id": "kk2_052", "self_contained": "maybe", "why": "account threat alarm"}
+{"id": "kk2_053", "self_contained": "maybe", "why": "account block threat"}
+{"id": "kk2_054", "self_contained": "maybe", "why": "press START to confirm"}
+{"id": "kk2_055", "self_contained": "no", "why": "neutral flower delivery"}
+{"id": "kk2_056", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk2_057", "self_contained": "maybe", "why": "wants to use your account"}
+{"id": "kk2_058", "self_contained": "yes", "why": "money mule card request"}
+{"id": "kk2_059", "self_contained": "yes", "why": "money mule transfer offer"}
+{"id": "kk2_060", "self_contained": "yes", "why": "easy daily income promise"}
+{"id": "kk2_061", "self_contained": "yes", "why": "rent out your card"}
+{"id": "kk2_062", "self_contained": "yes", "why": "easy home income promise"}
+{"id": "kk2_063", "self_contained": "yes", "why": "money mule commission offer"}
+{"id": "kk2_064", "self_contained": "no", "why": "ordinary tariff ad"}
+{"id": "kk2_065", "self_contained": "no", "why": "neutral bank opener"}
+{"id": "kk2_066", "self_contained": "no", "why": "neutral parcel opener"}
+{"id": "kk2_067", "self_contained": "maybe", "why": "money threat alarm"}
+{"id": "kk2_068", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "kk2_069", "self_contained": "maybe", "why": "suspect accusation"}
+{"id": "kk2_070", "self_contained": "yes", "why": "urgent money transfer"}
+{"id": "kk2_071", "self_contained": "maybe", "why": "safe account placement claim"}
+{"id": "kk2_072", "self_contained": "maybe", "why": "credit fixing money offer"}
+{"id": "kk2_073", "self_contained": "no", "why": "bare mistaken transfer remark"}
+{"id": "kk2_074", "self_contained": "maybe", "why": "odd anti-fraud operation claim"}
+{"id": "kk2_075", "self_contained": "maybe", "why": "urgent scan request"}
+{"id": "kk2_076", "self_contained": "no", "why": "generic marketing phrase"}
+{"id": "kk2_077", "self_contained": "yes", "why": "unsolicited smartphone win"}
+{"id": "kk2_078", "self_contained": "maybe", "why": "offers extralegal fix"}
+{"id": "kk2_079", "self_contained": "no", "why": "neutral delivery notice"}
+{"id": "kk2_080", "self_contained": "yes", "why": "send all money you have"}
+{"id": "kk2_081", "self_contained": "no", "why": "neutral repayment promise"}
+{"id": "kk2_082", "self_contained": "yes", "why": "link click to claim"}
+{"id": "kk2_083", "self_contained": "maybe", "why": "brand giveaway hook"}
+{"id": "kk2_084", "self_contained": "yes", "why": "urgently sell apartment, absurd"}
+{"id": "kk2_085", "self_contained": "no", "why": "ordinary notary talk"}
+{"id": "kk2_086", "self_contained": "no", "why": "neutral document question"}
+{"id": "kk2_087", "self_contained": "no", "why": "neutral registration remark"}
+{"id": "kk2_088", "self_contained": "no", "why": "neutral organizer claim"}
+{"id": "kk2_089", "self_contained": "no", "why": "neutral queue registration"}
+{"id": "kk2_090", "self_contained": "maybe", "why": "offers pension withdrawal"}
+{"id": "kk2_091", "self_contained": "no", "why": "neutral photo offer"}
+{"id": "kk2_092", "self_contained": "no", "why": "neutral portfolio remark"}
+{"id": "kk2_093", "self_contained": "no", "why": "neutral call remark"}
+{"id": "kk2_094", "self_contained": "yes", "why": "relative trouble, transfer money"}
+{"id": "kk2_095", "self_contained": "no", "why": "insult"}
+{"id": "kk2_096", "self_contained": "yes", "why": "QR code for delivery details"}
+{"id": "kk2_097", "self_contained": "maybe", "why": "criminals hacking account alarm"}
+{"id": "kk2_098", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "kk2_099", "self_contained": "no", "why": "neutral flower delivery"}
+{"id": "kk2_100", "self_contained": "yes", "why": "urgent payment for parcel"}
+{"id": "kk2_101", "self_contained": "maybe", "why": "offers pension withdrawal"}
+{"id": "kk2_102", "self_contained": "no", "why": "vague help promise"}
+{"id": "kk2_103", "self_contained": "maybe", "why": "money danger alarm"}
+{"id": "kk2_104", "self_contained": "maybe", "why": "relative trouble, no ask"}
+{"id": "kk2_105", "self_contained": "no", "why": "neutral service offer"}
+{"id": "kk2_106", "self_contained": "maybe", "why": "photo lure, no ask"}
+{"id": "kk2_107", "self_contained": "maybe", "why": "video lure, no ask"}
+{"id": "kk2_108", "self_contained": "maybe", "why": "video lure, no ask"}
+{"id": "kk2_109", "self_contained": "no", "why": "neutral work record notice"}
+{"id": "kk2_110", "self_contained": "yes", "why": "promises multiplied money back"}
+{"id": "kk2_111", "self_contained": "maybe", "why": "offers loan write-off"}
+{"id": "kk2_112", "self_contained": "yes", "why": "urgent money request"}
+{"id": "kk2_113", "self_contained": "no", "why": "neutral relative claim"}
+{"id": "kk2_114", "self_contained": "maybe", "why": "urgent fire alarm replacement"}
+{"id": "kk2_115", "self_contained": "maybe", "why": "special operation claim"}
+{"id": "kk2_116", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "kk2_117", "self_contained": "yes", "why": "unsolicited 13M grant approval"}
+{"id": "kk2_118", "self_contained": "no", "why": "neutral mortgage offer"}
+{"id": "kk2_119", "self_contained": "maybe", "why": "urgent apartment sale push"}
+{"id": "kk2_120", "self_contained": "no", "why": "neutral property offer"}
+{"id": "kk2_121", "self_contained": "maybe", "why": "loan bonus offer"}
+{"id": "kk2_122", "self_contained": "no", "why": "neutral identity claim"}
+{"id": "kk2_123", "self_contained": "maybe", "why": "unsolicited gift for relatives"}
+{"id": "kk2_124", "self_contained": "no", "why": "generic protection phrase"}
+{"id": "kk2_125", "self_contained": "no", "why": "neutral contest mention"}
+{"id": "kk2_126", "self_contained": "yes", "why": "promises doubling money"}
+{"id": "kk2_127", "self_contained": "yes", "why": "enter given Apple ID credentials"}
+{"id": "kk2_128", "self_contained": "yes", "why": "promises multiplying money"}
+{"id": "kk2_129", "self_contained": "maybe", "why": "too-good housing promise"}
+{"id": "kk2_130", "self_contained": "maybe", "why": "illegal exam proxy offer"}
+{"id": "kk2_131", "self_contained": "no", "why": "neutral debt-finding offer"}
+{"id": "kk2_132", "self_contained": "maybe", "why": "illegal army exemption offer"}
+{"id": "kk2_133", "self_contained": "yes", "why": "high income promise"}
+{"id": "kk2_134", "self_contained": "maybe", "why": "cheap car offer"}
+{"id": "kk2_135", "self_contained": "no", "why": "neutral repair offer"}
+{"id": "kk2_136", "self_contained": "maybe", "why": "license without exam offer"}
+{"id": "kk2_137", "self_contained": "yes", "why": "link to finish loan"}
+{"id": "kk2_138", "self_contained": "maybe", "why": "fraud loan cancellation help"}
+{"id": "kk2_139", "self_contained": "yes", "why": "push to invest more"}
+{"id": "kk2_140", "self_contained": "yes", "why": "money mule transfer offer"}
+{"id": "kk2_141", "self_contained": "maybe", "why": "urgent boss document request"}
+{"id": "kk2_142", "self_contained": "yes", "why": "payment via link phishing"}
+{"id": "kk2_143", "self_contained": "yes", "why": "relative urgent 200k transfer"}
+{"id": "kk2_144", "self_contained": "yes", "why": "30% monthly return, scarcity"}
+{"id": "kk2_145", "self_contained": "yes", "why": "confirm data or lose funds"}
+{"id": "kk2_146", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "kk2_147", "self_contained": "yes", "why": "unrealistic investment return"}
+{"id": "kk2_148", "self_contained": "yes", "why": "secret investment strategy pitch"}
+{"id": "kk2_149", "self_contained": "no", "why": "ordinary discount urgency"}
+{"id": "kk2_150", "self_contained": "maybe", "why": "investment social proof"}
+{"id": "kk2_151", "self_contained": "yes", "why": "suspicious op, confirm your data"}
+{"id": "kk2_152", "self_contained": "no", "why": "ordinary pension ad"}
+{"id": "kk2_153", "self_contained": "yes", "why": "installment phone cash-out scheme"}
+{"id": "kk2_154", "self_contained": "no", "why": "ordinary service ad"}
+{"id": "kk2_155", "self_contained": "maybe", "why": "installment cash-out, odd reassurance"}
+{"id": "kk2_156", "self_contained": "maybe", "why": "installment cash-out, odd reassurance"}
+{"id": "kk2_157", "self_contained": "maybe", "why": "unsolicited free diagnostics"}
+{"id": "kk2_158", "self_contained": "no", "why": "ordinary service ad"}
+{"id": "kk2_159", "self_contained": "yes", "why": "promises recovery of lost money"}
+{"id": "kk2_160", "self_contained": "no", "why": "neutral school notice"}
+{"id": "kk2_161", "self_contained": "yes", "why": "virus scare, install protection"}
+{"id": "kk2_162", "self_contained": "yes", "why": "asks mother's SMS code urgently"}
+{"id": "kk2_163", "self_contained": "maybe", "why": "account violation, confirm identity"}
+{"id": "kk2_164", "self_contained": "yes", "why": "gift via link"}
+{"id": "kk2_165", "self_contained": "maybe", "why": "prepayment before shipping"}
+{"id": "kk2_166", "self_contained": "yes", "why": "asks login and recovery code"}
+{"id": "kk2_167", "self_contained": "yes", "why": "asks temporary account access"}
+{"id": "kk2_168", "self_contained": "maybe", "why": "confirm identity to protect account"}
+{"id": "kk2_169", "self_contained": "yes", "why": "urgent 100k money request"}
+{"id": "kk2_170", "self_contained": "yes", "why": "QR code for delivery details"}
+{"id": "kk2_171", "self_contained": "maybe", "why": "health scare pressure"}
+{"id": "kk2_172", "self_contained": "maybe", "why": "repair scare pressure"}
+{"id": "kk2_173", "self_contained": "yes", "why": "open card, hand over data"}
+{"id": "kk2_174", "self_contained": "yes", "why": "money mule transfer offer"}
+{"id": "kk2_175", "self_contained": "yes", "why": "card holder wanted, easy income"}
+{"id": "kk2_176", "self_contained": "yes", "why": "money mule card scheme"}
+{"id": "kk2_177", "self_contained": "maybe", "why": "mule reassurance, vague"}
+{"id": "kk2_178", "self_contained": "yes", "why": "money mule card scheme"}
+{"id": "kk2_179", "self_contained": "maybe", "why": "card access help request"}
+{"id": "kk2_180", "self_contained": "no", "why": "ordinary e-signature reminder"}
+{"id": "kk2_181", "self_contained": "maybe", "why": "new e-signature issued alarm"}
+{"id": "kk2_182", "self_contained": "maybe", "why": "state money clickbait"}
+{"id": "kk2_183", "self_contained": "yes", "why": "pay fee to withdraw profit"}
+{"id": "kk2_184", "self_contained": "yes", "why": "pay more to activate account"}
+{"id": "kk2_185", "self_contained": "yes", "why": "pay fee to get income"}
+{"id": "kk2_186", "self_contained": "yes", "why": "triple money in a month"}
+{"id": "kk2_187", "self_contained": "yes", "why": "denies pyramid, closed investment club"}
+{"id": "kk2_188", "self_contained": "maybe", "why": "join team before payouts rise"}
+{"id": "kk2_189", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk2_190", "self_contained": "no", "why": "neutral delivery remark"}
+{"id": "kk2_191", "self_contained": "yes", "why": "asks card data"}
+{"id": "kk2_192", "self_contained": "yes", "why": "easy online income promise"}
+{"id": "kk2_193", "self_contained": "maybe", "why": "bank security loan alarm, no ask"}
+{"id": "kk2_194", "self_contained": "maybe", "why": "countdown urgency"}
+{"id": "kk2_195", "self_contained": "maybe", "why": "funds debit threat"}
+{"id": "kk2_196", "self_contained": "maybe", "why": "confirm request to stop operation"}
+{"id": "kk2_197", "self_contained": "maybe", "why": "update data, risk group"}
+{"id": "kk2_198", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk2_199", "self_contained": "yes", "why": "pay redelivery via link"}
+{"id": "kk2_200", "self_contained": "maybe", "why": "account threat alarm"}
+{"id": "kk2_201", "self_contained": "yes", "why": "unsolicited prize win"}
+{"id": "kk2_202", "self_contained": "maybe", "why": "vote request, known hook"}
+{"id": "kk2_203", "self_contained": "maybe", "why": "lure to look, no ask"}
+{"id": "kk2_204", "self_contained": "maybe", "why": "wrong number setup for code"}
+{"id": "kk2_205", "self_contained": "yes", "why": "asks to forward code"}
+{"id": "kk2_206", "self_contained": "yes", "why": "asks to lend money"}
+{"id": "kk2_207", "self_contained": "maybe", "why": "relative emergency, no ask"}
+{"id": "kk2_208", "self_contained": "maybe", "why": "relative trouble plus secrecy"}
+{"id": "kk2_209", "self_contained": "yes", "why": "easy remote income promise"}
+{"id": "kk2_210", "self_contained": "yes", "why": "asks SMS code"}
+{"id": "kk2_211", "self_contained": "maybe", "why": "cashback, confirm participation"}
+{"id": "kk2_212", "self_contained": "yes", "why": "money mule card request"}
+{"id": "kk2_213", "self_contained": "yes", "why": "open card, hand over details"}
+{"id": "kk2_214", "self_contained": "yes", "why": "money mule commission offer"}
+{"id": "kk2_215", "self_contained": "yes", "why": "account to recover stolen money"}
+{"id": "kk2_216", "self_contained": "no", "why": "ordinary salary card request"}
+{"id": "kk2_217", "self_contained": "yes", "why": "money mule card scheme"}
+{"id": "kk2_218", "self_contained": "yes", "why": "cash out to courier"}
+{"id": "kk2_219", "self_contained": "yes", "why": "install update for bank security"}
+{"id": "kk2_220", "self_contained": "no", "why": "bare parcel delay"}
+{"id": "kk2_221", "self_contained": "maybe", "why": "loan-in-your-name alarm, no ask"}
+{"id": "kk2_222", "self_contained": "maybe", "why": "vote request, known hook"}
+{"id": "kk2_223", "self_contained": "no", "why": "neutral approval notice"}
+{"id": "kk2_224", "self_contained": "maybe", "why": "confirm loan you may not want"}
+{"id": "kk2_225", "self_contained": "yes", "why": "iPhone win via link"}
+{"id": "kk2_226", "self_contained": "yes", "why": "asks card data for refund"}
+{"id": "kk2_227", "self_contained": "no", "why": "neutral timing remark"}
+{"id": "kk2_228", "self_contained": "yes", "why": "urgently re-register house"}
+{"id": "kk2_229", "self_contained": "maybe", "why": "money help offer"}
+{"id": "kk2_230", "self_contained": "maybe", "why": "guaranteed loan promise"}
+{"id": "kk2_231", "self_contained": "maybe", "why": "loan payment cover promise"}
+{"id": "kk2_232", "self_contained": "maybe", "why": "mistaken transfer, send back"}

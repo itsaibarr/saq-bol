@@ -1,0 +1,18 @@
+{
+ "mix": "data/processed/mix",
+ "model": "FacebookAI/xlm-roberta-large",
+ "name": "kg_xlmrL_v4",
+ "lr": 1e-05,
+ "epochs": 4,
+ "bs": 16,
+ "max_len": 96,
+ "seed": 1,
+ "scam_weight": 2.0,
+ "warmup": 0.1,
+ "wd": 0.01,
+ "prefix": "",
+ "out": "runs",
+ "num_labels": 2,
+ "pos_idx": 1,
+ "device": "cuda"
+}
