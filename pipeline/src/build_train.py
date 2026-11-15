@@ -24,6 +24,9 @@ ap.add_argument("--hfkk-frac", type=float, default=1.0)
 ap.add_argument("--ru-rf", type=int, default=0)  # real Russian-language scam texts from non-KZ sources (training only)
 ap.add_argument("--real-train-split", default="")  # A6: e.g. real_test -> spent test items become training rows
 ap.add_argument("--real-weight", type=int, default=4)
+ap.add_argument("--ru-rf2", type=int, default=0)  # A7: second batch of real non-KZ Russian scams (training only)
+ap.add_argument("--testB-train", type=int, default=0)  # A7: spent test B becomes training rows (A6 filters)
+ap.add_argument("--protect", default="")  # A7: comma list of held-out jsonl files (test C); near-copies dropped from training
 ap.add_argument("--notif", type=int, default=0)  # rule-based legit service notifications
 ap.add_argument("--hf-cap", type=int, default=8000)  # max rows per language from hf_extra  # add single-clause clips of synthetic messages  # A2: dropped (noisy NLLB, US content)
 args = ap.parse_args()
@@ -136,6 +139,18 @@ if args.ru_rf:
         r = json.loads(ln)
         add(r["text"], r["label"] == "scam", "ru", "ru_rf_real", r.get("scheme"), group=f"rurf:{i}")
 
+if args.ru_rf2:
+    for i, ln in enumerate(open("data/train_extra/ru_rf2_collected.jsonl")):
+        r = json.loads(ln)
+        add(r["text"], r["label"] == "scam", "ru", "ru_rf2_real", r.get("scheme"), group=f"rurf2:{r.get('source_url', i)}")
+
+# 9b. A7: spent test B as training rows (same filters as A6; prefix real_ so the x4 weight applies)
+if args.testB_train:
+    for _, x in pd.read_json("data/processed/testB.jsonl", lines=True).iterrows():
+        if x.unit == "description" or (x.unit == "fragment" and x.get("self_contained") not in ("yes", "maybe")):
+            continue
+        add(x.text, x.label == 1, x.language, "real_testB", x.get("scheme"), group=f"real:{x.id}")
+
 # 9. A6: spent real items as training rows (descriptions dropped; fragments only if blind-tagged recognizable)
 real_train_ids = set()
 if args.real_train_split:
@@ -176,6 +191,7 @@ real = pd.read_json("data/processed/real_all.jsonl", lines=True)
 if args.real_train_split:
     real = real[real.split != args.real_train_split]  # protect only items still held out
 rg = [grams(x) for x in real.text]
+n_protect = 0
 def leaks(s):
     g = grams(s)
     return any(len(g & h) / max(1, len(g | h)) >= 0.5 for h in rg)
@@ -189,6 +205,14 @@ df["max_cos_real"] = (Et @ Er.T).max(1)
 df["leak"] = df.leak | (df.max_cos_real >= 0.92)
 n_leak = int(df.leak.sum())
 leak_examples = df[df.leak].text.head(15).tolist()
+if args.protect:  # A7: held-out test C, stricter LaBSE cut (0.90) as on the test side
+    prot = pd.concat([pd.read_json(f, lines=True) for f in args.protect.split(",")], ignore_index=True)
+    pg = [grams(x) for x in prot.text]
+    Ep = embed(prot.text.tolist())
+    near = ((Et @ Ep.T).max(1) >= 0.90) | np.array([any(len(g & h) / max(1, len(g | h)) >= 0.5 for h in pg) for g in map(grams, df.text)])
+    n_protect = int((near & ~df.leak.values).sum())
+    print("protect: training rows dropped as near-copies of held-out items:", n_protect)
+    df["leak"] = df.leak | near
 df = df[~df.leak].drop(columns=["leak"])
 df = df.drop_duplicates("text")
 
@@ -253,7 +277,7 @@ ev.to_json(f"{args.out}/eval.jsonl", orient="records", lines=True, force_ascii=F
 val.to_json(f"{args.out}/val.jsonl", orient="records", lines=True, force_ascii=False)
 
 tr = df[df.split == "train"]
-stats = {"reassure_dropped": n_reassure, "kbd_aug": args.kbd_aug, "n_train": len(tr), "n_val": len(val), "leak_dropped": n_leak, "leak_examples": leak_examples,
+stats = {"reassure_dropped": n_reassure, "kbd_aug": args.kbd_aug, "n_train": len(tr), "n_val": len(val), "leak_dropped": n_leak, "protect_dropped": n_protect, "leak_examples": leak_examples,
          "train_label": dict(Counter(tr.label)), "train_lang_x_label": {f"{l}|{y}": int(n) for (l, y), n in tr.groupby(["language", "label"]).size().items()},
          "train_source": dict(Counter(tr.source)), "eval_sets": dict(Counter(ev.set))}
 json.dump(stats, open(f"{args.out}/stats.json", "w"), ensure_ascii=False, indent=1)

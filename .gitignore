@@ -12,6 +12,9 @@ data/processed/labse_cache.npz
 data/processed/mix_*/
 !data/processed/mix_v6c/
 !data/processed/mix_v7/
+!data/processed/mix_v8/
+data/processed/mix_v8/train.jsonl
+data/processed/mix_v8/val.jsonl
 data/processed/mix_v7/train.jsonl
 data/processed/mix_v7/val.jsonl
 data/processed/mix_v6c/train.jsonl
@@ -36,3 +39,6 @@ runs/*/preds*.jsonl
 !runs/kg_e5L_v6c_s2/preds.jsonl
 !runs/kg_e5L_v6c_s3/preds.jsonl
 !runs/B*/preds.jsonl
+!runs/kg_e5L_v8*/preds*.jsonl
+!runs/ens_v8*/preds*.jsonl
+!runs/ens_v7_e5x4_testC/preds*.jsonl

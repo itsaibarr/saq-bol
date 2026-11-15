@@ -152,3 +152,40 @@ A6 deviations (found in council round 4, disclosed, nothing re-scored):
 - The everyday-chat negatives (1,978) are the same pool used for test A, so the chat false-alarm rate is not fresh.
 - v1 was re-scored on Kaggle in fp16 for test B; its dev threshold was re-derived (0.99994270 vs 0.99994208 frozen) with no change in any decision.
 - Test B's 37 "advice_text" legit items are mostly real Otbasy Bank service notices (build_testB labels every legit web text advice_text); the README reports them as real bank/eGov notices.
+
+### A7. 2026-11-15 15:20 UTC+5: third model (v3, Russian focus) protocol, written before any v3 data came back or any v3 training
+Why: on test B, v2 caught 87% of Kazakh scams but 65% of Russian ones (20/31), the same as v1. In the v2 training mix Russian scams are outnumbered about 10 to 1 by Russian legit rows (Kazakh: 1 to 2), and pension/social-payment "recalculation" offers, three of v2's eleven Russian misses, are nearly absent.
+- Test set B is spent. It moves into TRAINING for v3 under the A6 rules (descriptions dropped; fragments only if blind-tagged yes/maybe; real rows weight x4). Dev stays the same 225 items.
+- New training data: a second batch of real Russian scam quotes from non-Kazakhstan publishers (`data/train_extra/ru_rf2_*`, publisher list disjoint from test C's), and 1,200 synthetic rows (G8, `data/synthetic/GENERATION_PROTOCOL_v3.md`, 60% Russian).
+- Test set C, collected under `data/real_test/COLLECTION_PROTOCOL_C.md` from pages not used before. Strata: Kazakhstan Russian (ru4, ru4b), Kazakhstan Kazakh (kk4), and Russian from outside Kazakhstan (rucis, reported separately; its publishers are never used in training). Test-side drops at build time, blind to model scores: near-copies (LaBSE >= 0.90 or char-5gram Jaccard >= 0.5, both metrics) of any earlier real item, dev item or v2 training row. Train-side drops: any v3 training row that is a near-copy of a test-C item under the same rule. Test C is locked (sha256 in RUNS.md) before the v3 mix is built. Before scoring, a blind AI annotator tags test-C scams as recognizable from the text alone (yes/maybe/no), as for test B.
+- Candidates (same recipe as v2: multilingual-e5-large, 2 epochs, lr 1e-5, scam weight 4): v3a = the v3 mix, seeds 1-2; v3b = the v3 mix with Russian scam rows duplicated x2, seeds 1-2. Ensembles (logit_z): v3a pair, v3b pair, all four. A5 picks among them on dev.
+- v3 replaces v2 only if, on dev, the A5 pick (i) has AP vs chat + notifications no more than 0.005 below v2's 0.978 and (ii) catches at least as many Russian dev headline scams at its own A4 threshold as v2 (40/48). Otherwise v2 stays the reported model. Decided before test C is scored.
+- Threshold: A4 rule, unchanged.
+- Test C is scored once for frozen v3 and frozen v2. Reported: recall on Kazakhstan headline scams (overall, Russian, Kazakh), the non-Kazakhstan Russian stratum separately, false alarms on test-C legit texts, chat FPR (same reused pool, disclosed), the recognizable subset, and paired McNemar v3 vs v2.
+- Predictions, written now: (1) v3 Russian recall on Kazakhstan test C is higher than v2's; (2) v3 Kazakh recall is within 5 points of v2's; (3) chat FPR stays at or below 1%; (4) Russian call openers with no scam signal in the text ("your order is at the warehouse") stay missed by both.
+- Hard freeze: Sun 19:30 UTC+5.
+
+## Results v3 (A7; frozen 2026-11-15 18:12 UTC+5; test C scored once for v3 and v2; runs/kg_e5L_v8b_s1/final_report_testC.json, runs/ens_v7_e5x4_testC/final_report_testC.json)
+Frozen v3: one multilingual-e5-large fine-tune (`kg_e5L_v8b_s1`) on mix v8 = mix v7 + test B as training + 665 real Russian quotes from non-Kazakhstan publishers + 1,200 synthetic rows (G8), with Russian scam rows counted twice. A5 picked it: the 4-model v3 ensemble had the top dev AP (0.9814), the v3b pair (0.9809) and this single model (0.9805) were within 0.005, and fewer models wins. A7 gate: dev AP 0.9805 vs v2 0.978, Russian dev scams 42/48 vs 40/48, so v3 replaced v2. Dev headline recall 100/114 vs v2 94/114.
+Test C: 306 items from 204 pages never used before. Kazakhstan: 151 headline scams (Russian 103, Kazakh 48) from 102 pages, 35 publishers (all Kazakhstan items: 163 pages); 50 legit texts (46 official-channel and bank texts, 4 SMS). Outside Kazakhstan: 76 Russian headline scams from 35 pages, 16 publishers (all non-Kazakhstan items: 41 pages); 6 SMS.
+- v3 on Kazakhstan scams: 90.1% [84, 94] (136/151); Russian 91.3% [84, 95] (94/103); Kazakh 87.5% [75, 94] (42/48). Chat FPR 0.25% (5/1978). Official and bank texts flagged 3/46; Kazakhstan SMS 0/4. Recognizable subset 95.3% (Russian 97.7%, Kazakh 90.5%); "no"-tagged 13/22. Keyboard-folded Kazakh 83.3% vs 87.5% (p = 0.5).
+- v2 on the same texts: 80.1% [73, 86]; Russian 83.5%; Kazakh 72.9%; chat FPR 0.05% (1/1978); official texts flagged 2/46.
+- Paired, Kazakhstan scams: v3 caught 16 that v2 missed, v2 caught 1 that v3 missed (McNemar p = 0.0003). Outside Kazakhstan: v3 88.2% [79, 94] vs v2 75.0%, 10 vs 0 (p = 0.002). Chat: v3 has 4 more false alarms than v2 (p = 0.125). Both flag 2 of the 6 non-Kazakhstan SMS ("Назовите сотруднику этот код...").
+- Predictions: (1) Russian higher than v2: yes, 91% vs 84%. (2) Kazakh not more than 5 points below v2: yes, 15 points higher. (3) chat FPR <= 1%: yes, 0.25%. (4) Russian call openers with no scam signal stay missed by both: partly wrong. v3 caught 13 of the 22 openers the blind annotator tagged "no", including neutral delivery lines ("На ваше имя пришла посылка. Будете получать?") that real couriers also send. False alarms on real delivery SMS are not measured by test C.
+- Test C's Russian is easier than test B's for the same model (v2: 84% vs 65%), so numbers across test sets are not comparable; only the paired comparison on test C is.
+
+A7 deviations and limits (disclosed, nothing re-scored):
+- The A5 tie-break picked a single model, as written; the 4-model and 2-model v3 ensembles were not scored on test C.
+- Test C has few real SMS (4 Kazakhstan, 6 non-Kazakhstan); its 46 legit official texts are mostly Telegram channel posts (Kaspi, eGov, ЕНПФ, Казгидромет) and Bank RBK notices.
+- The chat negatives are the same 1,978 lines used for tests A and B.
+- Test C was tagged by one blind annotator (no second-annotator agreement measured for test C).
+- build_testC.py was re-run after the lock to add the blind tags and write the eval file (a URL-filter bug made the first re-run fail); the items, texts and labels are identical to the locked copy (checked), only the tag column was added.
+- G8 families were chosen from v2's test-B misses (test B was already spent). Some ru_rf2 rows are Russian translations of US scam examples, as published by the source.
+
+Found in council round 5 (disclosed, nothing re-scored):
+- Near-containment: non-Kazakhstan item rucis_065 ("Была подана заявка на смену финансового номера. Вы данную заявку подтверждаете?") is nearly contained in a longer ru_rf2 training quote (rurf2_639); the Jaccard/LaBSE rule does not catch containment in long rows. Without it, the non-Kazakhstan stratum is 66/75 (88.0%). Four exact copies (rucis_041-044) were correctly dropped from training by --protect.
+- Label noise: kk4_020 ("бұл алаяқтарға смспен түскен кодтарды, құпия сөздеріңізді хабарламаңыз!") reads as ordinary bank-warning wording but is labelled scam; v3 flags it, v2 does not. Without it: 135/150 (90.0%), Kazakh 41/47 (87%).
+- The clip-augmentation step runs after the --protect filter, so clips were not checked against test C: two G8 clips reach char-5gram Jaccard 0.57 and 0.52 with legit test-C item ru4_057 (affects a legit item only).
+- 7 of v3's 16 extra catches over v2 are items the blind annotator tagged "no" (not recognizable from text alone).
+- The test-C lock note in RUNS.md said 98 pages; corrected to 204 at 18:40, after scoring. The sha256 anchor is unchanged.
+- No git commit between the A7 text (15:20) and scoring; timestamps are self-reported in SPEC.md and RUNS.md.

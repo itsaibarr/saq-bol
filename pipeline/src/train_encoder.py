@@ -22,6 +22,7 @@ ap.add_argument("--max-len", type=int, default=128); ap.add_argument("--seed", t
 ap.add_argument("--scam-weight", type=float, default=2.0); ap.add_argument("--warmup", type=float, default=0.06)
 ap.add_argument("--wd", type=float, default=0.01); ap.add_argument("--prefix", default="")
 ap.add_argument("--out", default="runs")
+ap.add_argument("--rep-ru-scam", type=int, default=1)  # A7 v3b: duplicate Russian scam rows N times
 ap.add_argument("--num-labels", type=int, default=2); ap.add_argument("--pos-idx", type=int, default=1)
 a = ap.parse_args()
 torch.manual_seed(a.seed); np.random.seed(a.seed)
@@ -30,7 +31,10 @@ amp = dev == "cuda"
 out = os.path.join(a.out, a.name); os.makedirs(out, exist_ok=True)
 json.dump(vars(a) | {"device": dev}, open(f"{out}/config.json", "w"), indent=1)
 
-tr = pd.read_json(f"{a.mix}/train.jsonl", lines=True).sample(frac=1, random_state=a.seed)
+tr = pd.read_json(f"{a.mix}/train.jsonl", lines=True)
+if a.rep_ru_scam > 1:
+    tr = pd.concat([tr] + [tr[(tr.language == "ru") & (tr.label == 1)]] * (a.rep_ru_scam - 1), ignore_index=True)
+tr = tr.sample(frac=1, random_state=a.seed)
 ev = pd.read_json(f"{a.mix}/eval.jsonl", lines=True)
 tok = AutoTokenizer.from_pretrained(a.model)
 model = AutoModelForSequenceClassification.from_pretrained(a.model, num_labels=a.num_labels).to(dev)

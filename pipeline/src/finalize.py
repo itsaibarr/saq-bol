@@ -23,7 +23,7 @@ ev = pd.read_json(f"{mix}/{a.eval_file}", lines=True)
 def load_scores(run):
     pr = pd.read_json(f"{run}/{a.preds_name}", lines=True)[["id", "set", "score"]].drop_duplicates(["id", "set"])
     d = ev.drop(columns=[c for c in ["score"] if c in ev.columns]).merge(pr, on=["id", "set"], how="left")
-    real = d.set.isin(["real_dev", "real_test", "kbd_perturbed", "tg_dev", "tg_test"])
+    real = d.set.isin(["real_dev", "real_test", "real_test_cis", "kbd_perturbed", "tg_dev", "tg_test"])
     assert d[real].score.notna().all(), f"{run}: missing scores on real/chat rows"
     return d
 
@@ -41,9 +41,13 @@ thr_low = operating_threshold(d, max_chat_fpr=0.05, max_notif_fpr=0.15)
 out = {"run": a.run, "mix": mix, "temperature": T, "thr_scam": thr, "thr_suspicious": thr_low,
        "dev": dev_report(d, thr), "test": report(d, thr, thr_low=thr_low),
        "finalized_at": datetime.datetime.now().isoformat(timespec="minutes"), "note": a.note, "comparisons": {}}
+if (d.set == "real_test_cis").any():  # A7: non-Kazakhstan Russian stratum, reported separately
+    out["test_cis"] = report(d, thr, split="real_test_cis")
 for other in a.compare:
     o = load_scores(other)
     out["comparisons"][os.path.basename(other)] = compare(d, o, thr, operating_threshold(o))
+    if "test_cis" in out:
+        out["comparisons"][os.path.basename(other) + "_cis"] = compare(d, o, thr, operating_threshold(o), split="real_test_cis")
 save(out, f"{a.run}/final_report{a.tag}.json")
 keep = [c for c in ["id", "set", "split", "label", "language", "unit", "headline", "score", "text"] if c in d.columns]
 d[keep].to_json(f"{a.run}/preds_final{a.tag}.jsonl", orient="records", lines=True, force_ascii=False)

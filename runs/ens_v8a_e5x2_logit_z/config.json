@@ -1,0 +1,8 @@
+{
+ "mix": "data/processed/mix_v8",
+ "members": [
+  "runs/kg_e5L_v8a_s1",
+  "runs/kg_e5L_v8a_s2"
+ ],
+ "method": "logit_z"
+}

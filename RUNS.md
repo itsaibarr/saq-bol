@@ -22,3 +22,19 @@
 - Ensemble preds sha256: c5d6d83ddfb40ca0
 | 2026-11-15T12:46 | ens_v7_e5x4_logit_z_testB | 0.822 [0.75, 0.88] | 0.0005 | 0.977 | 0.87 / 0.65 | test B, scored once (A6) |
 | 2026-11-15T12:46 | ens_v6c_e5s2s3_testB_testB | 0.713 [0.63, 0.78] | 0.0030 | 0.920 | 0.72 / 0.65 | test B, scored once (A6) |
+
+## Test C locked 2026-11-15T15:41 (A7)
+- data/processed/testC.jsonl, sha256 63e9da830ec1815d (copy: testC_locked.jsonl): 306 items from 4 collections (ru4, ru4b, kk4, rucis), 204 pages (corrected 18:40; first written as 98). Built blind to any model score.
+- Headline scams: Kazakhstan Russian 103, Kazakhstan Kazakh 48, non-Kazakhstan Russian 76. Legit: Kazakhstan 50 (46 official-channel and bank texts, 4 SMS), non-Kazakhstan 6 SMS.
+- Dropped at build: 26 near-copies of earlier real items, dev or v2 training rows (LaBSE >= 0.90 or char-5gram Jaccard >= 0.5); 2 internal near-duplicates; 1 excluded label (rucis_075, misleading advertising rather than fraud).
+- The v3 mix is built after this, with training rows near any test-C item dropped (--protect).
+
+## Freeze 2026-11-15T18:12: kg_e5L_v8b_s1
+- Note: v3 (A7): A5 pick among v3 singles and logit_z ensembles = kg_e5L_v8b_s1 (dev AP 0.9805; the 4-model ensemble 0.9814 and the v3b pair 0.9809 are within 0.005, fewer models wins). A7 gate vs v2: AP 0.9805 >= 0.978-0.005, Russian dev 42/48 >= 40/48, so v3 replaces v2. Frozen before test C is scored. Single model (one 560M encoder) instead of four.
+- Mix: data/processed/mix; ensemble method: single model
+- Selection rule: SPEC.md A5 (dev AP vs chat + notifications); operating point: A4.
+- Dev configurations evaluated before this freeze (trained runs and ensembles with dev preds): 53
+  - member kg_e5L_v8b_s1: model intfloat/multilingual-e5-large, lr 1e-05, epochs 2, seed 1, best epoch 2, preds sha256 4c88d158b2eccbcb
+- Ensemble preds sha256: 4c88d158b2eccbcb
+| 2026-11-15T18:32 | ens_v7_e5x4_testC_testC | 0.801 [0.73, 0.86] | 0.0005 | 0.977 | 0.73 / 0.83 | v2 on test C, scored once (A7) |
+| 2026-11-15T18:32 | kg_e5L_v8b_s1_testC | 0.901 [0.84, 0.94] | 0.0025 | 0.986 | 0.88 / 0.91 | v3 on test C, scored once (A7) |

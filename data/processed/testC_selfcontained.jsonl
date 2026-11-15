@@ -1,0 +1,250 @@
+{"id": "ru4b_006", "self_contained": "yes", "why": "asks to tell SMS code"}
+{"id": "kk4_047", "self_contained": "maybe", "why": "cheap pledged property offer; broker could say it"}
+{"id": "rucis_033", "self_contained": "maybe", "why": "number-expiry pretext, no request"}
+{"id": "ru4b_001", "self_contained": "no", "why": "neutral parcel notice"}
+{"id": "rucis_019", "self_contained": "maybe", "why": "known vote-for-niece script, but friend could ask"}
+{"id": "ru4b_017", "self_contained": "yes", "why": "recruits card for transfers for pay"}
+{"id": "kk4_057", "self_contained": "maybe", "why": "vague offer to withdraw money fast"}
+{"id": "kk4_028", "self_contained": "maybe", "why": "intimidating suspicion claim, no demand"}
+{"id": "ru4_086", "self_contained": "no", "why": "bare police introduction"}
+{"id": "rucis_002", "self_contained": "maybe", "why": "odd coercive bank claim, no request"}
+{"id": "ru4_055", "self_contained": "maybe", "why": "loan-attempt check; banks also ask this"}
+{"id": "kk4_010", "self_contained": "maybe", "why": "claims you are under investigation, no demand"}
+{"id": "rucis_026", "self_contained": "maybe", "why": "unsolicited loan approval notice"}
+{"id": "ru4b_002", "self_contained": "yes", "why": "mirror loan and safe account transfer"}
+{"id": "ru4_069", "self_contained": "yes", "why": "tells to take loans for withdrawal scheme"}
+{"id": "rucis_027", "self_contained": "maybe", "why": "vague apartment problem plus nondisclosure hint"}
+{"id": "kk4_039", "self_contained": "yes", "why": "transfer deposit to safe account"}
+{"id": "kk4_042", "self_contained": "no", "why": "bare self-introduction as telecom employee"}
+{"id": "rucis_076", "self_contained": "maybe", "why": "minimum balance demand; brokers say similar"}
+{"id": "ru4_095", "self_contained": "no", "why": "fragment mentioning operation, nothing actionable"}
+{"id": "kk4_007", "self_contained": "maybe", "why": "remote buyer asks to ship item"}
+{"id": "ru4_007", "self_contained": "maybe", "why": "vote-for-niece with link; friend could send"}
+{"id": "kk4_055", "self_contained": "maybe", "why": "urgent account-block threat, no request"}
+{"id": "ru4b_003", "self_contained": "maybe", "why": "alarm about data access, no request"}
+{"id": "kk4_032", "self_contained": "maybe", "why": "alarm about funds at risk, no request"}
+{"id": "rucis_032", "self_contained": "yes", "why": "instructs to transfer sum to given recipient"}
+{"id": "ru4_049", "self_contained": "yes", "why": "tax pretext, asks to dictate 1414 code"}
+{"id": "ru4b_025", "self_contained": "maybe", "why": "urgent fire alarm replacement push"}
+{"id": "rucis_010", "self_contained": "maybe", "why": "asks to authorize in chatbot for letter"}
+{"id": "kk4_045", "self_contained": "maybe", "why": "offers to read husband's WhatsApp; shady service"}
+{"id": "ru4_004", "self_contained": "yes", "why": "loan, mirror account, app install"}
+{"id": "rucis_018", "self_contained": "maybe", "why": "contract problem pretext, no request"}
+{"id": "ru4_061", "self_contained": "maybe", "why": "operator SIM-expiry threat; operator could call"}
+{"id": "rucis_071", "self_contained": "maybe", "why": "card blocked, call number; banks send similar"}
+{"id": "rucis_001", "self_contained": "maybe", "why": "bank security transfer check; legit plausible"}
+{"id": "ru4_063", "self_contained": "yes", "why": "100% guaranteed loan any amount"}
+{"id": "rucis_035", "self_contained": "no", "why": "neutral letter delivery query"}
+{"id": "ru4_068", "self_contained": "yes", "why": "sends code to close accounts for protection"}
+{"id": "ru4_064", "self_contained": "yes", "why": "take installment goods, we buy them"}
+{"id": "ru4b_031", "self_contained": "yes", "why": "demands selling apartment under threat"}
+{"id": "ru4_031", "self_contained": "maybe", "why": "bureaucratic criminal-case talk, no demand"}
+{"id": "rucis_045", "self_contained": "maybe", "why": "generic unsolicited media bait"}
+{"id": "kk4_020", "self_contained": "no", "why": "anti-fraud warning not to share codes"}
+{"id": "ru4_019", "self_contained": "no", "why": "neutral greeting about filled form"}
+{"id": "ru4_043", "self_contained": "yes", "why": "courier asks for SMS code"}
+{"id": "ru4_028", "self_contained": "yes", "why": "agency pressure, casts boss as suspect"}
+{"id": "ru4_024", "self_contained": "maybe", "why": "stranger odd voice-message request"}
+{"id": "ru4_029", "self_contained": "yes", "why": "asks to dictate 1414 code"}
+{"id": "ru4_053", "self_contained": "maybe", "why": "hype earning urgency; could be ad"}
+{"id": "ru4_094", "self_contained": "yes", "why": "money mule: accept transfer keep percent"}
+{"id": "ru4b_015", "self_contained": "maybe", "why": "EDS compromised alarm, no request"}
+{"id": "rucis_043", "self_contained": "yes", "why": "asks parents' card number"}
+{"id": "rucis_053", "self_contained": "no", "why": "neutral greeting from bank-like office"}
+{"id": "ru4_047", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "rucis_079", "self_contained": "no", "why": "reassurance about refund courier"}
+{"id": "ru4_059", "self_contained": "maybe", "why": "payment threat; tax notice could say it"}
+{"id": "rucis_059", "self_contained": "yes", "why": "urgent request for money"}
+{"id": "rucis_017", "self_contained": "yes", "why": "lottery win, pay tax via link"}
+{"id": "ru4_056", "self_contained": "yes", "why": "parcel, asks SMS code"}
+{"id": "rucis_047", "self_contained": "maybe", "why": "urgent call-back request"}
+{"id": "rucis_016", "self_contained": "yes", "why": "urgent money request from 'friend'"}
+{"id": "ru4b_028", "self_contained": "maybe", "why": "account hacked alarm, no request"}
+{"id": "rucis_093", "self_contained": "maybe", "why": "data leak alarm, no request"}
+{"id": "ru4_090", "self_contained": "yes", "why": "agency claim, forbids telling relatives"}
+{"id": "kk4_050", "self_contained": "maybe", "why": "high income promise; job ads similar"}
+{"id": "ru4b_010", "self_contained": "maybe", "why": "unsolicited prize claim"}
+{"id": "rucis_060", "self_contained": "yes", "why": "asks to transfer money to account"}
+{"id": "ru4_038", "self_contained": "no", "why": "interrogation opener, nothing specific"}
+{"id": "rucis_025", "self_contained": "maybe", "why": "bank-style insurance connection push"}
+{"id": "rucis_051", "self_contained": "maybe", "why": "fake transfer alert with info phone"}
+{"id": "ru4b_013", "self_contained": "maybe", "why": "threat of debit, urges reaction"}
+{"id": "rucis_055", "self_contained": "maybe", "why": "bare request to confirm self-ban"}
+{"id": "rucis_029", "self_contained": "maybe", "why": "pre-announced police captain call"}
+{"id": "ru4_046", "self_contained": "maybe", "why": "urgency with account-block threat"}
+{"id": "rucis_061", "self_contained": "no", "why": "contract amount question, neutral"}
+{"id": "rucis_083", "self_contained": "yes", "why": "bank 'calling via Viber' with fake excuse"}
+{"id": "kk4_024", "self_contained": "maybe", "why": "vague anti-fraud officer self-introduction"}
+{"id": "rucis_022", "self_contained": "maybe", "why": "data leak alarm, no request"}
+{"id": "rucis_085", "self_contained": "maybe", "why": "fraud alert asking voice confirmation; banks do"}
+{"id": "ru4_088", "self_contained": "yes", "why": "enter data via link to receive money"}
+{"id": "rucis_020", "self_contained": "maybe", "why": "free premium giveaway lure"}
+{"id": "ru4_027", "self_contained": "maybe", "why": "investigator tone, dictating actions, no ask yet"}
+{"id": "ru4_062", "self_contained": "maybe", "why": "loan broker ad for bad credit"}
+{"id": "rucis_036", "self_contained": "maybe", "why": "loan application alert, no request"}
+{"id": "ru4_058", "self_contained": "maybe", "why": "tax office overdue claim; legit plausible"}
+{"id": "ru4_026", "self_contained": "yes", "why": "KNB check, must obey callers' demands"}
+{"id": "ru4_002", "self_contained": "no", "why": "neutral who-are-you message"}
+{"id": "ru4_099", "self_contained": "maybe", "why": "threat fragment, no specifics"}
+{"id": "ru4_052", "self_contained": "maybe", "why": "scarcity push to enter at minimum price"}
+{"id": "rucis_062", "self_contained": "yes", "why": "gambling pot scheme, collect 95,000 target"}
+{"id": "rucis_090", "self_contained": "maybe", "why": "loan attempt alarm"}
+{"id": "rucis_030", "self_contained": "maybe", "why": "asks to isolate for private talk"}
+{"id": "rucis_074", "self_contained": "maybe", "why": "loan-in-your-name alarm"}
+{"id": "ru4_050", "self_contained": "maybe", "why": "debit attempt alarm with urgency"}
+{"id": "ru4_070", "self_contained": "yes", "why": "pay 5 million to release withdrawal"}
+{"id": "kk4_033", "self_contained": "maybe", "why": "odd document update with service-loss threat"}
+{"id": "kk4_061", "self_contained": "maybe", "why": "vague easy money withdrawal offer"}
+{"id": "kk4_012", "self_contained": "maybe", "why": "data sold on forums alarm"}
+{"id": "kk4_015", "self_contained": "yes", "why": "flowers pretext, asks for code"}
+{"id": "ru4b_026", "self_contained": "yes", "why": "'honest deal', just transfer money"}
+{"id": "rucis_056", "self_contained": "maybe", "why": "customs fee via link; couriers do this"}
+{"id": "ru4_084", "self_contained": "yes", "why": "pay relative's debt or accounts arrested"}
+{"id": "kk4_030", "self_contained": "no", "why": "surgery mention, no request"}
+{"id": "ru4_067", "self_contained": "yes", "why": "asks to dictate SMS code"}
+{"id": "kk4_016", "self_contained": "maybe", "why": "flower delivery link consent request"}
+{"id": "ru4_014", "self_contained": "yes", "why": "urgent transfer to 'insurance agent' account"}
+{"id": "ru4_081", "self_contained": "yes", "why": "parcel, must dictate code"}
+{"id": "rucis_021", "self_contained": "maybe", "why": "account hacking alarm"}
+{"id": "kk4_043", "self_contained": "maybe", "why": "unsolicited prize win claim"}
+{"id": "kk4_044", "self_contained": "maybe", "why": "loan refinance help offer"}
+{"id": "ru4_022", "self_contained": "maybe", "why": "offer to recover stolen money"}
+{"id": "ru4_065", "self_contained": "yes", "why": "promises deleting loans from bank databases"}
+{"id": "ru4_076", "self_contained": "no", "why": "neutral failed delivery notice"}
+{"id": "rucis_005", "self_contained": "maybe", "why": "recording claim, odd battery question"}
+{"id": "rucis_054", "self_contained": "maybe", "why": "unsolicited loan approval with odd link"}
+{"id": "ru4_071", "self_contained": "yes", "why": "fake apartment sale, transfer to their accounts"}
+{"id": "rucis_003", "self_contained": "yes", "why": "Central Bank impersonation, don't hang up"}
+{"id": "kk4_034", "self_contained": "yes", "why": "tells not to tell anyone"}
+{"id": "rucis_063", "self_contained": "maybe", "why": "asks which other banks you use"}
+{"id": "ru4_017", "self_contained": "yes", "why": "openly mocks victim for being scammed"}
+{"id": "kk4_054", "self_contained": "no", "why": "bare purchase notification"}
+{"id": "ru4_012", "self_contained": "yes", "why": "counter-application pretext, asks for code"}
+{"id": "kk4_053", "self_contained": "yes", "why": "openly admits being fraudsters"}
+{"id": "rucis_052", "self_contained": "maybe", "why": "fake debit alert with info phone"}
+{"id": "rucis_049", "self_contained": "maybe", "why": "bank gift link, overly flowery"}
+{"id": "ru4_042", "self_contained": "yes", "why": "asks to dictate code"}
+{"id": "kk4_008", "self_contained": "maybe", "why": "suspicious operation alert, no request"}
+{"id": "kk4_048", "self_contained": "yes", "why": "urgent money request to card"}
+{"id": "ru4_005", "self_contained": "no", "why": "card block, directs to real branch"}
+{"id": "ru4b_005", "self_contained": "yes", "why": "meter check, asks SMS code"}
+{"id": "kk4_009", "self_contained": "yes", "why": "offers to install antivirus on phone"}
+{"id": "rucis_064", "self_contained": "maybe", "why": "probes bank and account details"}
+{"id": "ru4_025", "self_contained": "no", "why": "transfer note text, neutral"}
+{"id": "ru4_092", "self_contained": "yes", "why": "easy earnings for card number"}
+{"id": "ru4_060", "self_contained": "maybe", "why": "relative-in-accident opener, no request"}
+{"id": "ru4_015", "self_contained": "yes", "why": "staff are fraudsters, coaches you to lie"}
+{"id": "ru4_082", "self_contained": "maybe", "why": "EDS issued in your name alarm"}
+{"id": "ru4_023", "self_contained": "no", "why": "neutral extension question"}
+{"id": "kk4_003", "self_contained": "maybe", "why": "urgent balance payment; dealer could ask"}
+{"id": "ru4_041", "self_contained": "maybe", "why": "fraud recovery offer"}
+{"id": "ru4_080", "self_contained": "maybe", "why": "grandchild in police plea, no money ask"}
+{"id": "kk4_013", "self_contained": "maybe", "why": "vague emergency casualty claim"}
+{"id": "ru4_032", "self_contained": "maybe", "why": "court summons; legit plausible"}
+{"id": "rucis_014", "self_contained": "maybe", "why": "operator contract-expiry block threat"}
+{"id": "ru4_079", "self_contained": "no", "why": "trading talk, nothing signals scam"}
+{"id": "rucis_011", "self_contained": "maybe", "why": "failed certification, redirect to site"}
+{"id": "rucis_012", "self_contained": "maybe", "why": "account blocked, call number"}
+{"id": "kk4_019", "self_contained": "maybe", "why": "inspection of organization claim"}
+{"id": "rucis_065", "self_contained": "maybe", "why": "number-change confirmation; banks ask this"}
+{"id": "rucis_084", "self_contained": "maybe", "why": "bank specialist claims unlawful actions"}
+{"id": "ru4_072", "self_contained": "no", "why": "neutral question about employee"}
+{"id": "rucis_007", "self_contained": "maybe", "why": "delivery identity confirmation request"}
+{"id": "rucis_008", "self_contained": "yes", "why": "intercom pretext, asks for code"}
+{"id": "kk4_022", "self_contained": "maybe", "why": "investment trial with personal expert"}
+{"id": "ru4_093", "self_contained": "yes", "why": "rent your card for pay"}
+{"id": "rucis_006", "self_contained": "yes", "why": "threatens police, demands deposit to cells"}
+{"id": "kk4_036", "self_contained": "yes", "why": "tells to take loan from bank"}
+{"id": "kk4_060", "self_contained": "maybe", "why": "nonsense pension rating boost offer"}
+{"id": "ru4_087", "self_contained": "no", "why": "neutral buyer interest"}
+{"id": "ru4_035", "self_contained": "no", "why": "neutral intercom key question"}
+{"id": "rucis_004", "self_contained": "yes", "why": "demands confidentiality citing criminal code"}
+{"id": "rucis_087", "self_contained": "yes", "why": "asks card number and CVV"}
+{"id": "kk4_035", "self_contained": "yes", "why": "police operation, demands your help"}
+{"id": "kk4_046", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "kk4_056", "self_contained": "maybe", "why": "cheap state housing help offer"}
+{"id": "kk4_027", "self_contained": "yes", "why": "transfer to insurance account"}
+{"id": "rucis_077", "self_contained": "maybe", "why": "bank contact via WhatsApp, odd"}
+{"id": "ru4_054", "self_contained": "maybe", "why": "too-good iPhone deal"}
+{"id": "rucis_028", "self_contained": "maybe", "why": "warns you'll be called, be ready"}
+{"id": "ru4_010", "self_contained": "yes", "why": "link, enter card to get funds"}
+{"id": "rucis_031", "self_contained": "maybe", "why": "alarming apartment fraud claim"}
+{"id": "ru4_016", "self_contained": "yes", "why": "bank pretext, download security app"}
+{"id": "ru4b_009", "self_contained": "maybe", "why": "suspicious operation alert"}
+{"id": "ru4_018", "self_contained": "maybe", "why": "loans with your ID alarm"}
+{"id": "rucis_089", "self_contained": "maybe", "why": "debit in progress alarm"}
+{"id": "ru4_096", "self_contained": "no", "why": "scheduling fragment, neutral"}
+{"id": "ru4_037", "self_contained": "maybe", "why": "card hacked claim, asks about person"}
+{"id": "kk4_051", "self_contained": "no", "why": "neutral confirmation-interval fragment"}
+{"id": "rucis_080", "self_contained": "yes", "why": "extortion threat over iPhone/iCloud"}
+{"id": "ru4_089", "self_contained": "no", "why": "seller remark, neutral"}
+{"id": "ru4b_004", "self_contained": "yes", "why": "asks SMS 'queue number' code"}
+{"id": "kk4_025", "self_contained": "maybe", "why": "National Bank claims loan attempt"}
+{"id": "kk4_017", "self_contained": "no", "why": "fragment: you'll get an SMS"}
+{"id": "ru4_077", "self_contained": "maybe", "why": "loan approved, withdraw via link"}
+{"id": "ru4_013", "self_contained": "yes", "why": "instructs cash withdrawal of 1 million"}
+{"id": "rucis_078", "self_contained": "maybe", "why": "documents ready but fees required"}
+{"id": "ru4b_033", "self_contained": "yes", "why": "asks to hand over card"}
+{"id": "ru4b_032", "self_contained": "maybe", "why": "vague earnings offer"}
+{"id": "ru4b_024", "self_contained": "yes", "why": "small investment, big profit promise"}
+{"id": "kk4_029", "self_contained": "maybe", "why": "offer to withdraw excess pension"}
+{"id": "rucis_088", "self_contained": "no", "why": "neutral follow-up question"}
+{"id": "ru4_020", "self_contained": "no", "why": "language preference, neutral"}
+{"id": "kk4_041", "self_contained": "yes", "why": "give us 700k, we close loan"}
+{"id": "rucis_034", "self_contained": "no", "why": "neutral post office greeting"}
+{"id": "ru4_044", "self_contained": "yes", "why": "fake excuse for spoofed foreign number"}
+{"id": "ru4_078", "self_contained": "maybe", "why": "receive money via link"}
+{"id": "ru4_003", "self_contained": "yes", "why": "casts bank staff as suspects, recruits you"}
+{"id": "ru4_034", "self_contained": "maybe", "why": "fine threat for non-appearance"}
+{"id": "rucis_066", "self_contained": "maybe", "why": "vague fraud technical department intro"}
+{"id": "rucis_013", "self_contained": "yes", "why": "FSB case, strictly confidential"}
+{"id": "ru4b_029", "self_contained": "maybe", "why": "card block threat"}
+{"id": "kk4_058", "self_contained": "maybe", "why": "deposit theft attempt alarm"}
+{"id": "kk4_002", "self_contained": "yes", "why": "doctor pretext, asks for code"}
+{"id": "kk4_026", "self_contained": "maybe", "why": "fraudsters transferring money alarm"}
+{"id": "ru4_001", "self_contained": "yes", "why": "asks to send money to friend's number"}
+{"id": "ru4_066", "self_contained": "maybe", "why": "passive income pitch"}
+{"id": "ru4_006", "self_contained": "maybe", "why": "vote-for-niece script; friend could ask"}
+{"id": "rucis_092", "self_contained": "no", "why": "neutral code timing notice"}
+{"id": "rucis_086", "self_contained": "no", "why": "neutral chat migration notice"}
+{"id": "ru4b_027", "self_contained": "yes", "why": "offers to rent your card"}
+{"id": "rucis_046", "self_contained": "no", "why": "neutral document notice"}
+{"id": "kk4_023", "self_contained": "no", "why": "neutral password setup instruction"}
+{"id": "rucis_081", "self_contained": "no", "why": "neutral reassurance fragment"}
+{"id": "ru4_048", "self_contained": "maybe", "why": "accomplice accusation intimidation"}
+{"id": "ru4b_030", "self_contained": "no", "why": "bare data confirmation request"}
+{"id": "kk4_031", "self_contained": "no", "why": "bare bank security introduction"}
+{"id": "kk4_014", "self_contained": "maybe", "why": "emotional pressure not to ask"}
+{"id": "kk4_040", "self_contained": "maybe", "why": "securities investment pitch"}
+{"id": "kk4_018", "self_contained": "maybe", "why": "asks to read incoming message aloud"}
+{"id": "ru4_098", "self_contained": "maybe", "why": "time pressure fragment"}
+{"id": "rucis_048", "self_contained": "maybe", "why": "card suspended, call number"}
+{"id": "ru4_033", "self_contained": "maybe", "why": "settle before court via number"}
+{"id": "rucis_009", "self_contained": "maybe", "why": "appointment identity code setup"}
+{"id": "ru4_074", "self_contained": "maybe", "why": "payment via link"}
+{"id": "rucis_037", "self_contained": "maybe", "why": "bank robot loan confirmation"}
+{"id": "rucis_041", "self_contained": "yes", "why": "urgent transfer, tell no one"}
+{"id": "ru4_051", "self_contained": "maybe", "why": "scarcity promo push"}
+{"id": "ru4_030", "self_contained": "yes", "why": "meter pretext, asks for code"}
+{"id": "ru4_091", "self_contained": "yes", "why": "game prize, log in via link"}
+{"id": "rucis_015", "self_contained": "maybe", "why": "bank security loan application call"}
+{"id": "kk4_006", "self_contained": "yes", "why": "transfer money to safe place"}
+{"id": "kk4_037", "self_contained": "maybe", "why": "tells to distrust police; advisories say similar"}
+{"id": "rucis_038", "self_contained": "maybe", "why": "FSB officer seconded claim"}
+{"id": "ru4_008", "self_contained": "yes", "why": "accident, urgent money request"}
+{"id": "rucis_044", "self_contained": "yes", "why": "asks for incoming code"}
+{"id": "kk4_052", "self_contained": "maybe", "why": "shady GPA boost offer"}
+{"id": "kk4_005", "self_contained": "yes", "why": "bailiff, transfer money to unblock"}
+{"id": "kk4_049", "self_contained": "maybe", "why": "tax deadline alarm"}
+{"id": "rucis_024", "self_contained": "maybe", "why": "classic 'your photo' bait"}
+{"id": "rucis_073", "self_contained": "no", "why": "neutral parcel problem notice"}
+{"id": "rucis_070", "self_contained": "maybe", "why": "mistaken transfer, asks return"}
+{"id": "ru4_009", "self_contained": "yes", "why": "transfer to safe account"}
+{"id": "ru4_083", "self_contained": "maybe", "why": "signature issued in your name alarm"}
+{"id": "kk4_038", "self_contained": "maybe", "why": "court fine threat, contact number"}
+{"id": "kk4_011", "self_contained": "no", "why": "bare KNB introduction"}
+{"id": "rucis_072", "self_contained": "no", "why": "neutral tax letter notice"}
+{"id": "rucis_023", "self_contained": "yes", "why": "urgent transfer to safe account"}
+{"id": "rucis_082", "self_contained": "maybe", "why": "suspicious transfer attempts alert"}
+{"id": "rucis_042", "self_contained": "maybe", "why": "parents in trouble, urgent help"}
+{"id": "ru4b_021", "self_contained": "yes", "why": "pay commission to get income"}
