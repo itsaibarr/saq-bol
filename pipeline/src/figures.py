@@ -26,7 +26,7 @@ def rec(r):
     return (r.get("rate"), r.get("wilson95"), r.get("k"), r.get("n"))
 
 
-def recall_by_language(models, out, title=None, note=None):
+def recall_by_language(models, out, title=None, note=None, label_all=False):
     fig, ax = plt.subplots(figsize=(9.0, 0.62 * len(models) + 2.0))
     for i, (label, t) in enumerate(models):
         y = len(models) - 1 - i
@@ -37,8 +37,8 @@ def recall_by_language(models, out, title=None, note=None):
             p, (lo, hi), k, n = rec(r)
             ax.plot([lo, hi], [y + dy, y + dy], color=col, lw=2, solid_capstyle="round")
             ax.plot(p, y + dy, "o", ms=8, color=col, mec=SURFACE, mew=2, label=name if i == 0 else None)
-            if i == len(models) - 1 or label.startswith("Ours"):
-                ax.annotate(f"{p:.0%}", (hi, y + dy), xytext=(6, 0), textcoords="offset points", va="center", fontsize=9, color=INK2)
+            if label_all or i == len(models) - 1 or label.startswith("Ours"):
+                ax.annotate(f"{int(p * 100 + 0.5)}%", (hi, y + dy), xytext=(6, 0), textcoords="offset points", va="center", fontsize=9, color=INK2)
     ax.set_yticks(range(len(models)), [m[0] for m in models][::-1])
     ax.set_xlim(0, 1); ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.grid(axis="x", color=GRID, lw=0.8); ax.set_axisbelow(True)
@@ -51,7 +51,7 @@ def recall_by_language(models, out, title=None, note=None):
     fig.tight_layout(rect=(0, 0.06, 1, 1)); fig.savefig(out, dpi=180); plt.close(fig)
 
 
-def keyboard(models, out):
+def keyboard(models, out, title=None):
     rows = [(l, t["kbd_paired"]) for l, t in models if "kbd_paired" in t]
     fig, ax = plt.subplots(figsize=(9.0, 0.55 * len(rows) + 2.0))
     for i, (label, kb) in enumerate(rows):
@@ -69,7 +69,7 @@ def keyboard(models, out):
         ax.spines[s].set_visible(False)
     ax.set_xlabel(f"Recall on the same {rows[0][1]['test']['n']} real Kazakh scam texts")
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, frameon=False, fontsize=9)
-    fig.suptitle("Does keyboard-Kazakh spelling hide a scam?", x=0.01, ha="left", fontsize=12, color=INK)
+    fig.suptitle(title or "Does keyboard-Kazakh spelling hide a scam?", x=0.01, ha="left", fontsize=12, color=INK)
     fig.text(0.01, 0.01, "+a / −b: scams caught only after folding / only before folding (paired).", fontsize=8.5, color=INK2)
     fig.tight_layout(rect=(0, 0.03, 1, 1)); fig.savefig(out, dpi=180); plt.close(fig)
 

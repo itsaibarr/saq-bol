@@ -38,3 +38,11 @@
 - Ensemble preds sha256: 4c88d158b2eccbcb
 | 2026-11-15T18:32 | ens_v7_e5x4_testC_testC | 0.801 [0.73, 0.86] | 0.0005 | 0.977 | 0.73 / 0.83 | v2 on test C, scored once (A7) |
 | 2026-11-15T18:32 | kg_e5L_v8b_s1_testC | 0.901 [0.84, 0.94] | 0.0025 | 0.986 | 0.88 / 0.91 | v3 on test C, scored once (A7) |
+| 2026-11-15T20:14 | ens_v6c_e5s2s3_testC_testC | 0.801 [0.73, 0.86] | 0.0030 | 0.957 | 0.75 / 0.83 | v1 on test C, scored once (A8, comparison only) |
+
+## A8 comparison on test C (scored once each, after v3; no model changed)
+| model | headline recall | chat FPR | recall kk / ru | note |
+|---|---|---|---|---|
+| B2_generic_spam_model | 0.066 | 0.0025 | 0.00 / 0.10 | A4 threshold, refit |
+| B1_keyword_rule (A4 / own setting) | 0.013 / 0.225 | 0.0000 / 0.0015 | 0.00 / 0.02 ; 0.13 / 0.27 | |
+| B5_offshelf_scam_model | 0.377 | 0.0005 | 0.31 / 0.41 | A4 threshold |

@@ -30,9 +30,9 @@ Other training data:
 - About 5,100 rule-based legit service notifications and 2,200 scam "twins" (`pipeline/src/gen_notifications.py`).
 
 ## Pretrained models
-- intfloat/multilingual-e5-large (MIT): version 1 (two fine-tuned copies), version 2 (four) and the final version 3 (one) https://huggingface.co/intfloat/multilingual-e5-large
+- intfloat/multilingual-e5-large (MIT): version 1 (two fine-tuned copies), version 2 (four) and the final version 3 (one); version 3's weights are published at https://huggingface.co/itsaibarr/saq-bol-v3 (CC BY-NC-SA 4.0, because of the non-commercial training data) https://huggingface.co/intfloat/multilingual-e5-large
 - FacebookAI/xlm-roberta-base and xlm-roberta-large (MIT), kz-transformers/kaz-roberta-conversational (Apache-2.0): compared, not used in the final model
-- Horizon-Labs/phishing-scam-detector-base (Apache-2.0): baseline B5 and a compared fine-tune https://huggingface.co/Horizon-Labs/phishing-scam-detector-base
+- Horizon-Labs/phishing-scam-detector-base (Apache-2.0): baseline B5 ("existing multilingual scam model", scored as is on tests A and C) and a compared fine-tune https://huggingface.co/Horizon-Labs/phishing-scam-detector-base
 - facebook/nllb-200-distilled-1.3B and -600M (CC BY-NC 4.0): Russian/English to Kazakh translation for training data
 - sentence-transformers/LaBSE (Apache-2.0): translation-pair linking and leakage checks
 

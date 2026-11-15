@@ -189,3 +189,17 @@ Found in council round 5 (disclosed, nothing re-scored):
 - 7 of v3's 16 extra catches over v2 are items the blind annotator tagged "no" (not recognizable from text alone).
 - The test-C lock note in RUNS.md said 98 pages; corrected to 204 at 18:40, after scoring. The sha256 anchor is unchanged.
 - No git commit between the A7 text (15:20) and scoring; timestamps are self-reported in SPEC.md and RUNS.md.
+
+### A8. 2026-11-15 19:33 UTC+5 (file time; first typed as 20:05 by mistake): existing tools and version 1 on test C (comparison only), written before any of them is scored on test C
+Added after the v3 results were known, at the user's request to compare against tools in use today on the same test set. No model is trained, changed or selected; v3 stays the final model and its numbers do not change.
+- Scored once each on test C: the official red-flag keyword rule (B1, at the A4 threshold and at its own setting of one red flag), the generic spam filter (B2: TF-IDF + LR on English SMS Spam and a Russian spam corpus, refit with the same fixed data and seed), the existing multilingual scam model (B5: Horizon-Labs/phishing-scam-detector-base, as is), and version 1 (frozen 2026-11-15 03:20, scored on Kaggle in fp16 as for test B).
+- Thresholds: the A4 rule on dev, the same rule as every model. B3 (TF-IDF on our own data) is not an existing tool and is not scored on test C.
+- Reported next to v3 in the same tables and figures, with the same metrics.
+
+## Results A8 (scored 2026-11-15 19:36-20:14 UTC+5; runs/B*/report_testC.json, runs/ens_v6c_e5s2s3_testC/final_report_testC.json)
+Test C, 151 Kazakhstan headline scams, each model at its A4 dev threshold (keyword rule also at its own >= 1-flag setting):
+- B2 generic spam filter: 6.6% (Russian 9.7%, Kazakh 0%); outside Kazakhstan 9.2%; chat FPR 0.25%. Refit threshold 0.6056 vs 0.6080 at test A (same data and seed; the small difference was not investigated).
+- B1 keyword rule: 1.3% at the A4 threshold; 22.5% at its own setting (Russian 27.2%, Kazakh 12.5%), outside Kazakhstan 17.1%, chat FPR 0.15%, 3 of 4 Kazakhstan service SMS flagged.
+- B5 existing multilingual scam model: 37.7% (Russian 40.8%, Kazakh 31.2%), outside Kazakhstan 35.5%, chat FPR 0.05%; keyboard-folded Kazakh 20.8%.
+- v1: 80.1% (Russian 82.5%, Kazakh 75.0%), outside Kazakhstan 80.3%, chat FPR 0.30%; threshold re-derived on dev 0.99994270 (as for test B).
+- Paired with v3 on the 151 scams: v3 vs B5 80 vs 1, v3 vs B1 (own setting) 102 vs 0, v3 vs v1 17 vs 2 (McNemar p = 0.0007).

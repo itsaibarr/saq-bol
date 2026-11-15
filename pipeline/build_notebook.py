@@ -68,7 +68,11 @@ v2C = json.load(open("runs/ens_v7_e5x4_testC/final_report_testC.json"))
 print(summary_line("v2 on test C", v2C["test"]))
 print(summary_line("v3 (final) on test C", final["test"]))
 print(summary_line("v2 on test C, Russian outside KZ", v2C["test_cis"]))
-print(summary_line("v3 on test C, Russian outside KZ", final["test_cis"]))"""))
+print(summary_line("v3 on test C, Russian outside KZ", final["test_cis"]))
+print("--- Tools in use today and version 1, scored once each on test C after v3 (SPEC.md A8; no model changed):")
+for name in ["B2_generic_spam_model", "B1_keyword_rule_natural", "B5_offshelf_scam_model"]:
+    print(summary_line(name + " on test C", json.load(open(f"runs/{name}/report_testC.json"))["test"]))
+print(summary_line("v1 on test C", json.load(open("runs/ens_v6c_e5s2s3_testC/final_report_testC.json"))["test"]))"""))
 C.append(md("## 4. Results by language, keyboard-Kazakh, and same-text pairs"))
 C.append(code("""t = final["test"]
 def fmt(r): return "n<10" if r.get("rate") is None else f"{r['rate']:.1%} [{r['wilson95'][0]:.0%}, {r['wilson95'][1]:.0%}] (n={r['n']})"
@@ -80,7 +84,7 @@ print("Keyboard-Kazakh (same scams, letters folded):", t.get("kbd_paired"))
 print("Russian from outside Kazakhstan:", fmt(final["test_cis"]["headline"]["recall"]))
 print("Secondary:", json.dumps({k: (v.get('rate'), v.get('n')) for k, v in t["secondary"].items()}, ensure_ascii=False, indent=1))"""))
 C.append(code("""from IPython.display import Image, display
-for f in ["reports/figures/fig_testC_v2_v3.png", "reports/figures/fig_keyboard_kazakh_testC.png", "reports/figures/fig_testB_v1_v2.png", "reports/figures/fig_recall_by_language.png"]:
+for f in ["reports/figures/fig_testC_main.png", "reports/figures/fig_keyboard_kazakh_testC.png", "reports/figures/fig_testB_v1_v2.png", "reports/figures/fig_recall_by_language.png"]:
     display(Image(f))"""))
 C.append(md("## 5. Where it fails (real-test examples)"))
 C.append(code("""p = pd.read_json(f"{FINAL_RUN}/{PREDS}", lines=True)
@@ -115,8 +119,9 @@ ready = all(os.path.exists(f"{m}/best/model.safetensors") for m in cfg.get("memb
 if IN_COLAB and HF_MODEL and not ready:
     from huggingface_hub import snapshot_download
     try:
-        for m in cfg.get("members", [FINAL_RUN]):
-            snapshot_download(f"{HF_MODEL}-{os.path.basename(m).split('_')[-1]}", local_dir=f"{m}/best")
+        targets = [(m, f"{HF_MODEL}-{os.path.basename(m).split('_')[-1]}") for m in cfg["members"]] if "members" in cfg else [(FINAL_RUN, HF_MODEL)]
+        for m, repo in targets:
+            snapshot_download(repo, local_dir=f"{m}/best")
         ready = True
     except Exception as e:
         print("Model weights are not published on Hugging Face yet (", type(e).__name__, "). All results above are computed from saved predictions.")

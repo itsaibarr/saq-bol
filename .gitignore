@@ -39,6 +39,10 @@ runs/*/preds*.jsonl
 !runs/kg_e5L_v6c_s2/preds.jsonl
 !runs/kg_e5L_v6c_s3/preds.jsonl
 !runs/B*/preds.jsonl
+!runs/B*/preds_testC.jsonl
+!runs/ens_v6c_e5s2s3_testC/preds*.jsonl
+!runs/kg_e5L_v6c_s2/preds_eval_testC.jsonl
+!runs/kg_e5L_v6c_s3/preds_eval_testC.jsonl
 !runs/kg_e5L_v8*/preds*.jsonl
 !runs/ens_v8*/preds*.jsonl
 !runs/ens_v7_e5x4_testC/preds*.jsonl
