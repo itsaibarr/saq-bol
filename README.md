@@ -12,7 +12,7 @@ Gulnara apa is 67, lives in Astana and speaks Kazakh first. A call comes in: "Ka
 
 ## What we built
 
-Paste a message, or a call transcript with one line per turn. The model returns a risk band (scam, suspicious, no clear signs), highlights the phrase that drove the score, lists red flags from the official keyword list, and gives one action in Kazakh or Russian ("Қоңырауды үзіңіз. Банкке картаның артындағы не ресми қосымшадағы нөмір арқылы өзіңіз хабарласыңыз."). Call mode re-scores after each turn; it is a demo only, since we had no real call transcripts to test on. Run: `python app.py`, or the last cell of `notebooks/saq_bol.ipynb`.
+Paste a message, or a call transcript with one line per turn. The model returns a risk band (scam, suspicious, no clear signs), highlights the phrase that drove the score, lists red flags from the official keyword list, and gives one action in Kazakh or Russian ("Қоңырауды үзіңіз. Банкке картаның артындағы не ресми қосымшадағы нөмір арқылы өзіңіз хабарласыңыз."). Call mode re-scores after each turn; it is a demo only, since we had no real call transcripts to test on. Run: `python app.py` with the four model files in `runs/kg_e5L_v7_s*/best/` (1.1 GB each, not in this repo; available on request). The notebook shows every result without them. On the Mac the demo agreed with the evaluated model on 142 of 143 checked texts; the one difference sits exactly at the threshold.
 
 ## What we added
 

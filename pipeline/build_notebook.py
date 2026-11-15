@@ -101,15 +101,20 @@ On Colab (Runtime > Change runtime type > T4 GPU) this downloads the two fine-tu
 C.append(code("""import os
 IN_COLAB = "google.colab" in sys.modules
 cfg = json.load(open(f"{FINAL_RUN}/config.json"))
-if IN_COLAB and HF_MODEL:
+ready = all(os.path.exists(f"{m}/best/model.safetensors") for m in cfg.get("members", [FINAL_RUN]))
+if IN_COLAB and HF_MODEL and not ready:
     from huggingface_hub import snapshot_download
-    for m in cfg.get("members", [FINAL_RUN]):
-        if not os.path.exists(f"{m}/best/model.safetensors"):
+    try:
+        for m in cfg.get("members", [FINAL_RUN]):
             snapshot_download(f"{HF_MODEL}-{os.path.basename(m).split('_')[-1]}", local_dir=f"{m}/best")
+        ready = True
+    except Exception as e:
+        print("Model weights are not published on Hugging Face yet (", type(e).__name__, "). All results above are computed from saved predictions.")
+if IN_COLAB and ready:
     os.environ["SAQBOL_SHARE"] = "1"
     sys.argv = ["app.py", FINAL_RUN]
     exec(open("app.py").read().replace('if __name__ == "__main__":', 'if True:'))
-else:
+elif not IN_COLAB:
     print("Demo launches on Colab. Locally: python app.py", FINAL_RUN)"""))
 nb["cells"] = C
 nbf.write(nb, "notebooks/saq_bol.ipynb")
