@@ -127,3 +127,28 @@ Frozen model: mean z-scored logits of two multilingual-e5-large fine-tunes (seed
 - False alarms: everyday chat 0.30% (6/1978); real bank notifications 14.5% [8, 25] (10/69), above the 5% dev target (dev 2/45). The threshold rests on 45 dev notifications and templates informed by dev errors; it did not transfer.
 - Same rule, baselines: keyword rule 27.2% (natural setting, same 14.5% notification FPR), off-the-shelf scam model 30.3%, TF-IDF on our data 43.7%, generic spam model 4.7% (Kazakh 0%).
 Pre-registered predictions, final status: P1 falsified; P2 falsified (narrowly); P3 (encoder beats TF-IDF on PR-AUC vs chat, biggest gain on keyboard-Kazakh): first part supported (0.960 vs 0.838), second part falsified (gain is larger on standard Kazakh than on keyboard-folded); P4 inconclusive (encoder still loses 10 points on keyboard-folded Kazakh, p = 0.0015; TF-IDF ablation mixed); P5 supported (unseen schemes 68.8% vs seen 82.4%).
+
+### A6. 2026-11-15 11:15 UTC+5: second model (v2) protocol, written before any v2 data or training
+- Test set A (the 575 items scored once for v1) is spent. It moves into TRAINING for v2: headline scams, self-contained fragments, legit notifications and advice texts (descriptions dropped), real rows upweighted x4. v1's reported result stays as it is.
+- Dev stays the same 225 items (selection and A4 threshold, unchanged rule).
+- Test set B: new real items collected from pages not used in rounds 1-2, frozen before any v2 model is scored on it. Items that are near-copies (LaBSE >= 0.90 or char-5gram Jaccard >= 0.5) of any training row or dev item are dropped at build time, blind to model scores. If the user provides their own bank/eGov SMS (with consent, anonymised), they are split 50/50 into threshold calibration (added to dev notifications) and test B.
+- Candidates: e5-large fine-tunes on the v2 mix (same recipe, seeds 1-3), single and logit_z ensembles. Selection rule A5 on dev. v2 replaces v1 as the reported headline model only if its dev AP (vs chat + notifications) is higher than v1's; otherwise v1 stays. This is decided before test B is scored.
+- Test B is scored once for the frozen v2 AND for the frozen v1 (fair before/after). Both test A (v1) and test B (v1, v2) results are reported.
+- Hard freeze: Sun 16:00 UTC+5.
+
+## Results v2 (A6; frozen 2026-11-15 12:32 UTC+5; test B scored once for v1 and v2; runs/*/final_report_testB.json)
+Frozen v2: mean z-scored logits of four multilingual-e5-large fine-tunes (seeds 1-4, 2 epochs) on mix v7 (v6c + the spent test-A items as training, weight x4). Dev AP vs chat + notifications 0.978 (v1 0.962), so v2 replaced v1 under the A6 rule.
+Test B: 195 real items from 127 pages never used before (129 headline scams: Kazakh 93, Russian 31, mixed 5; only 2 real service SMS, so SMS false alarms cannot be measured on test B).
+- v2: recall 82.2% [75, 88] (106/129); Kazakh 87.1% [79, 92]; Russian 64.5% [47, 79] (20/31); chat FPR 0.05% (1/1978); anti-fraud advice flagged 8.1%; recognizable-from-text subset 88.4% (Kazakh 90.2%, Russian 80%); keyboard-folded Kazakh 76.3% vs 87.1% (p = 0.03).
+- v1 on the same test B: recall 71.3% [63, 78]; Kazakh 72.0%; Russian 64.5%; chat FPR 0.30%; advice flagged 18.9%.
+- Paired on the 129 scams: v2 caught 16 that v1 missed, v1 caught 2 that v2 missed (McNemar p = 0.0013).
+- The novel-scheme slice is not reported for test B (its scheme names were not mapped to the training taxonomy).
+
+- Disclosure (found after the v2 freeze): the 43 zenmoney/sms-formats notifications in test A (collection states no licence; earlier rule: evaluation only) were included in v2's training when test A moved into training. Not retrained, to avoid a second look at test B. The training mix is not published.
+
+A6 deviations (found in council round 4, disclosed, nothing re-scored):
+- A6 named seeds 1-3; four seeds (1-4) were trained, all launched together before any v2 result existed, and the A5 rule picked the 4-seed ensemble.
+- build_testB.py ran the char-5gram Jaccard check against dev only, not against training. 5 test-B items exceed 0.5 against training (2 headline scams, both caught by both models). Excluding them: v2 81.9%, v1 70.9%, Russian 63%.
+- The everyday-chat negatives (1,978) are the same pool used for test A, so the chat false-alarm rate is not fresh.
+- v1 was re-scored on Kaggle in fp16 for test B; its dev threshold was re-derived (0.99994270 vs 0.99994208 frozen) with no change in any decision.
+- Test B's 37 "advice_text" legit items are mostly real Otbasy Bank service notices (build_testB labels every legit web text advice_text); the README reports them as real bank/eGov notices.

@@ -1,6 +1,6 @@
 # 2-minute demo video (screen recording + your voice)
 
-Record the screen with QuickTime (File > New Screen Recording) while `python app.py runs/ens_v6c_e5s2s3_logit_z` runs, and talk over it. Upload to YouTube as Unlisted.
+Record the screen with QuickTime (File > New Screen Recording) while `python app.py` runs, and talk over it. Upload to YouTube as Unlisted.
 
 | Time | On screen | Say (English) |
 |---|---|---|
@@ -8,15 +8,15 @@ Record the screen with QuickTime (File > New Screen Recording) while `python app
 | 0:15-0:35 | Message tab, first Kazakh example, click Тексеру | "She pastes the message. Red: likely scam. The highlighted phrase drove the score, the red flags are from the official list, and the advice is in Kazakh: hang up and call the number on your card." |
 | 0:35-0:45 | The OTP example | "A normal bank code SMS that says 'never share this code' stays quiet." |
 | 0:45-1:00 | Call tab, click the button | "Call mode re-scores after every line. The warning fires at line N, before the caller asks for the code." (read N off the screen) |
-| 1:00-1:15 | Paste: Вам сообщили о попытке оформления кредита? Срочно созвонитесь с банком! | "This is a real bank warning and we flag it. That is our main weakness: 14.5% of real service SMS were false alarms on test, against a 5% target." |
-| 1:15-1:45 | Recall chart | "We tested on 800 real texts copied from 389 Kazakh public pages, never trained on. Two fine-tuned multilingual-e5 models catch 81% of real scams, against 44% for TF-IDF, 30% for an existing scam model and 27% for the official keyword rule." |
-| 1:45-2:00 | Keyboard-Kazakh chart | "Kazakh typed on a Russian keyboard still costs us 10 points. Next: real keyboard-Kazakh data and calibrating on volunteers' bank SMS. Prototype, not financial advice." |
+| 1:00-1:15 | Paste: Вам сообщили о попытке оформления кредита? Срочно созвонитесь с банком! | "Our first version flagged real bank warnings like this one: 14.5% of real service SMS were false alarms, against a 5% target. We retrained on real SMS, but we could not yet measure the new rate on fresh SMS." |
+| 1:15-1:45 | Recall chart | "We built a real test set: 995 texts copied from 516 Kazakhstan pages. Version 1 caught 81% of real scams, against 44% for TF-IDF, 30% for an existing scam model and 27% for the official keyword rule. Then we retrained on that test set and collected a fresh one: version 2 catches 82% there, 87% in Kazakh, against 71% for version 1 on the same texts." |
+| 1:45-2:00 | Keyboard-Kazakh chart | "Russian on the fresh set is 65%, and Kazakh typed on a Russian keyboard still costs us 11 points. Next: real keyboard-Kazakh data and calibrating on volunteers' bank SMS. Prototype, not financial advice." |
 
 # 5-minute finals plan
 - 0:00-0:40 Gulnara, the moment of the call, the regulator's 7 questions (since 1 Oct 2026).
 - 0:40-2:40 Live app: Kazakh scam, the same text in keyboard Kazakh, the OTP SMS staying safe, call mode, the real bank-SMS false alarm. Run locally with models preloaded; keep the video and Colab as backup.
-- 2:40-3:50 How the test set was built (389 pages, verbatim, URL + date), 155 leakage drops, why the bank-SMS rule exists, the falsified predictions, the baseline chart.
-- 3:50-4:30 Fairness: keyboard Kazakh -10 points; identical official texts caught only in Russian 10 times vs only in Kazakh once; English junk text causes most chat false alarms.
+- 2:40-3:50 How the test sets were built (995 texts, 516 pages, verbatim, URL + date), leakage drops, why the bank-SMS rule exists, the falsified predictions, the baseline chart, and the v1-to-v2 step on a fresh test set (71% to 82%, p = 0.001).
+- 3:50-4:30 Fairness: keyboard Kazakh -11 points for v2 on test B; identical official texts caught only in Russian 10 times vs only in Kazakh once; English junk text causes most chat false alarms.
 - 4:30-5:00 Impact and next steps (speech-to-text, volunteer SMS calibration, a phone-sized model).
 
 # Q&A prep (short answers)

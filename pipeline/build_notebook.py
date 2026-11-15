@@ -27,7 +27,7 @@ if "google.colab" in sys.modules:\n    subprocess.run([sys.executable, "-m", "pi
 sys.path.insert(0, "pipeline/src")
 import pandas as pd, numpy as np
 pd.set_option("display.max_colwidth", 120)
-FINAL_RUN, MIX, HF_MODEL = "{final_run}", "{mix}", "{hf_repo}"
+FINAL_RUN, MIX, HF_MODEL = "{final_run}", "{mix}", "{hf_repo}"\nREPORT, PREDS = "final_report_testB.json", "preds_final_testB.jsonl"  # v2 was scored on fresh test set B
 print("ready")"""))
 C.append(md("""## 1. The real test set
 Hand-collected from banks, regulators, police and news outlets in Kazakhstan (URLs and dates in `data/processed/real_all.jsonl`). Each item has a **unit**:
@@ -35,8 +35,9 @@ Hand-collected from banks, regulators, police and news outlets in Kazakhstan (UR
 - `fragment` (4 words or fewer) and `description` (third-person scheme descriptions): reported separately or excluded;
 - legit `notification` (real bank SMS and push texts) and `advice_text` (official anti-fraud advice that quotes scams).
 
-Split into real-dev (model selection) and real-test (reported once per frozen model), grouped so translations and near-duplicates never straddle the split."""))
-C.append(code("""real = pd.read_json("data/processed/real_all.jsonl", lines=True)
+Split into real-dev (model selection) and real-test A (version 1, scored once), grouped so translations and near-duplicates never straddle the split. After version 1 was frozen, test A moved into training and a fresh test set B (195 texts from pages never used before, `data/processed/testB.jsonl`) was collected and scored once for both versions."""))
+C.append(code("""tb = pd.read_json("data/processed/testB.jsonl", lines=True); print(len(tb), "test-B items"); display(pd.crosstab([tb.label, tb.unit], tb.language))
+real = pd.read_json("data/processed/real_all.jsonl", lines=True)
 print(len(real), "real items")
 display(pd.crosstab([real.split, real.unit], real.language))
 display(real[(real.split == "real_test") & real.headline].sample(6, random_state=1)[["language", "unit", "scheme", "text", "publisher", "published_date"]])"""))
@@ -52,8 +53,14 @@ rows = []
 for name in ["B2_generic_spam_model", "B1_keyword_rule", "B1_keyword_rule_natural", "B3_tfidf_our_mix", "B5_offshelf_scam_model"]:
     rep = json.load(open(f"runs/{name}/report.json"))["test"]
     print(summary_line(name, rep))
-final = json.load(open(f"{FINAL_RUN}/final_report.json"))
-print(summary_line("FINAL " + os.path.basename(FINAL_RUN), final["test"]))"""))
+final = json.load(open(f"{FINAL_RUN}/{REPORT}"))
+print("--- Above: baselines on test set A (254 scams). Version 1 was frozen and scored once on test A:")
+v1A = json.load(open("runs/ens_v6c_e5s2s3_logit_z/final_report.json"))
+print(summary_line("v1 on test A", v1A["test"]))
+print("--- Then test A moved into training; a fresh test set B was collected and both versions were scored on it once:")
+v1B = json.load(open("runs/ens_v6c_e5s2s3_testB/final_report_testB.json"))
+print(summary_line("v1 on test B", v1B["test"]))
+print(summary_line("v2 (final) on test B", final["test"]))"""))
 C.append(md("## 4. Results by language, keyboard-Kazakh, and same-text pairs"))
 C.append(code("""t = final["test"]
 def fmt(r): return "n<10" if r.get("rate") is None else f"{r['rate']:.1%} [{r['wilson95'][0]:.0%}, {r['wilson95'][1]:.0%}] (n={r['n']})"
@@ -65,17 +72,22 @@ print("Keyboard-Kazakh (same scams, letters folded):", t.get("kbd_paired"))
 print("Kazakh/Russian translation pairs:", t.get("kk_ru_pairs"))
 print("Secondary:", json.dumps({k: (v.get('rate'), v.get('n')) for k, v in t["secondary"].items()}, ensure_ascii=False, indent=1))"""))
 C.append(code("""from IPython.display import Image, display
-for f in ["reports/figures/fig_recall_by_language.png", "reports/figures/fig_keyboard_kazakh.png"]:
+for f in ["reports/figures/fig_testB_v1_v2.png", "reports/figures/fig_recall_by_language.png", "reports/figures/fig_keyboard_kazakh.png"]:
     display(Image(f))"""))
 C.append(md("## 5. Where it fails (real-test examples)"))
-C.append(code("""p = pd.read_json(f"{FINAL_RUN}/preds_final.jsonl", lines=True)
+C.append(code("""p = pd.read_json(f"{FINAL_RUN}/{PREDS}", lines=True)
 thr = final["thr_scam"]
 print(f"Operating threshold (frozen, set on dev): {thr:.5f}. Scores below it are not flagged.")
 # Recompute the headline numbers from raw predictions (no saved metrics used)
 rt_ = p[p.set == "real_test"]; hs_ = rt_[(rt_.label == 1) & (rt_.headline == True)]
 print("recomputed: recall", round((hs_.score >= thr).mean(), 4), "| kk", round((hs_[hs_.language == "kk"].score >= thr).mean(), 4), "| ru", round((hs_[hs_.language == "ru"].score >= thr).mean(), 4),
-      "| chat FPR", round((p[p.set == "tg_test"].score >= thr).mean(), 4), "| bank-SMS FPR", round((rt_[(rt_.label == 0) & (rt_.unit == "notification")].score >= thr).mean(), 4))
-print("paired test vs off-the-shelf model (McNemar):", final["comparisons"])
+      "| chat FPR", round((p[p.set == "tg_test"].score >= thr).mean(), 4))
+nt_ = rt_[(rt_.label == 0) & (rt_.unit == "notification")]
+print(f"service SMS in this test set: {len(nt_)} (flagged {int((nt_.score >= thr).sum())}); too few to estimate a rate on test B")
+from evaluate import mcnemar
+v1p = pd.read_json("runs/ens_v6c_e5s2s3_testB/preds_final_testB.jsonl", lines=True)
+m_ = p.merge(v1p, on=["id", "set"], suffixes=("", "_v1")); hs2 = m_[(m_.set == "real_test") & (m_.label == 1) & (m_.headline == True)]
+print("paired on test-B scams, v2 vs v1 (McNemar):", mcnemar((hs2.score >= thr).astype(int), (hs2.score_v1 >= v1B["thr_scam"]).astype(int)))
 rt = p[p.set == "real_test"]
 print("Missed real scams (lowest scores):")
 display(rt[(rt.label == 1) & rt.headline & (rt.score < thr)].sort_values("score")[["language", "unit", "score", "text"]].head(8))

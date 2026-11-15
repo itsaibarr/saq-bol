@@ -26,7 +26,7 @@ def rec(r):
     return (r.get("rate"), r.get("wilson95"), r.get("k"), r.get("n"))
 
 
-def recall_by_language(models, out):
+def recall_by_language(models, out, title=None, note=None):
     fig, ax = plt.subplots(figsize=(9.0, 0.62 * len(models) + 2.0))
     for i, (label, t) in enumerate(models):
         y = len(models) - 1 - i
@@ -46,8 +46,8 @@ def recall_by_language(models, out):
         ax.spines[s].set_visible(False)
     ax.set_xlabel("Real scams caught (recall) at each model's strict threshold")
     ax.legend(loc="lower left", bbox_to_anchor=(0, 1.0), ncol=2, frameon=False)
-    fig.suptitle("Real Kazakhstan scam texts: Kazakh vs Russian", x=0.01, ha="left", fontsize=12, color=INK)
-    fig.text(0.01, 0.01, "Threshold set on dev: ≤1 false alarm per 100 everyday messages and ≤1 per 20 bank SMS (keyword rule: its own ≥1-red-flag setting).\nDots: recall on 254 real-test scam messages and call phrases (5+ words). Lines: Wilson 95% interval.", fontsize=8.5, color=INK2)
+    fig.suptitle(title or "Real Kazakhstan scam texts: Kazakh vs Russian", x=0.01, ha="left", fontsize=12, color=INK)
+    fig.text(0.01, 0.01, note or ("Threshold set on dev: ≤1 false alarm per 100 everyday messages and ≤1 per 20 bank SMS (keyword rule: its own ≥1-red-flag setting).\nDots: recall on 254 real-test scam messages and call phrases (5+ words). Lines: Wilson 95% interval."), fontsize=8.5, color=INK2)
     fig.tight_layout(rect=(0, 0.06, 1, 1)); fig.savefig(out, dpi=180); plt.close(fig)
 
 

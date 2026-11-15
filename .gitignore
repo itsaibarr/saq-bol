@@ -11,6 +11,9 @@ data/processed/labse_cache.npz
 # derived training data built from third-party corpora (rebuild with pipeline/src/build_*.py)
 data/processed/mix_*/
 !data/processed/mix_v6c/
+!data/processed/mix_v7/
+data/processed/mix_v7/train.jsonl
+data/processed/mix_v7/val.jsonl
 data/processed/mix_v6c/train.jsonl
 data/processed/mix_v6c/val.jsonl
 data/processed/hf_extra.jsonl
@@ -25,6 +28,11 @@ runs/*/best/
 runs/_*/
 runs/*/preds*.jsonl
 !runs/ens_v6c_e5s2s3_logit_z/preds*.jsonl
+!runs/ens_v6c_e5s2s3_testB/preds*.jsonl
+!runs/ens_v7_e5x4_logit_z/preds*.jsonl
+!runs/kg_e5L_v7_s*/preds*.jsonl
+!runs/kg_e5L_v6c_s2/preds_eval_testB.jsonl
+!runs/kg_e5L_v6c_s3/preds_eval_testB.jsonl
 !runs/kg_e5L_v6c_s2/preds.jsonl
 !runs/kg_e5L_v6c_s3/preds.jsonl
 !runs/B*/preds.jsonl

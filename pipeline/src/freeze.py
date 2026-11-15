@@ -5,7 +5,7 @@ Writes a freeze block to RUNS.md before real-test is scored. Refuses to run twic
 """
 import argparse, datetime, glob, hashlib, json, os, subprocess, sys
 
-ap = argparse.ArgumentParser(); ap.add_argument("run"); ap.add_argument("--note", default=""); ap.add_argument("--compare", nargs="*", default=[])
+ap = argparse.ArgumentParser(); ap.add_argument("run"); ap.add_argument("--note", default=""); ap.add_argument("--compare", nargs="*", default=[]); ap.add_argument("--record-only", action="store_true")
 a = ap.parse_args()
 if os.path.exists(f"{a.run}/final_report.json"):
     sys.exit(f"{a.run} already finalized; real-test is scored once per frozen model.")
@@ -27,4 +27,6 @@ if not os.path.exists("RUNS.md"):
     open("RUNS.md", "w").write("# Real-test log (each line = one frozen model, scored once)\n")
 open("RUNS.md", "a").write("\n".join(block) + "\n")
 print("\n".join(block))
+if a.record_only:
+    sys.exit(0)
 subprocess.run([sys.executable, "pipeline/src/finalize.py", a.run, "--mix", cfg.get("mix"), "--note", a.note] + (["--compare"] + a.compare if a.compare else []), check=True)

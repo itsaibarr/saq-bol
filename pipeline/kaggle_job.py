@@ -59,14 +59,14 @@ for f in glob.glob(f"{W}/data/processed/*_out.jsonl"): shutil.copy(f, "/kaggle/w
 '''
 
 
-def run(slug, jobs):
+def run(slug, jobs, kernel_sources=(), cpu=False):
     d = os.path.join(STAGE, slug); shutil.rmtree(d, ignore_errors=True); os.makedirs(d)
     jobs = [j.replace("data/processed/mix_v4", "data/processed/mix").replace("--mix data/processed/mix ", "--mix data/processed/mix ") for j in jobs]
     open(f"{d}/run.py", "w").write(RUNNER.replace("__JOBS__", json.dumps(jobs)))
     json.dump({"id": f"{OWNER}/{slug}", "title": slug, "code_file": "run.py", "language": "python", "kernel_type": "script",
-               "is_private": True, "enable_gpu": True, "enable_internet": True, "dataset_sources": [f"{OWNER}/{DS}"],
-               "competition_sources": [], "kernel_sources": [], "model_sources": []}, open(f"{d}/kernel-metadata.json", "w"))
-    sh(f"{KGL} kernels push -p {d} --accelerator NvidiaTeslaT4 -t 7200")
+               "is_private": True, "enable_gpu": not cpu, "enable_internet": True, "dataset_sources": [f"{OWNER}/{DS}"],
+               "competition_sources": [], "kernel_sources": list(kernel_sources), "model_sources": []}, open(f"{d}/kernel-metadata.json", "w"))
+    sh(f"{KGL} kernels push -p {d} -t 7200" if cpu else f"{KGL} kernels push -p {d} --accelerator NvidiaTeslaT4 -t 7200")
 
 
 def fetch(slug, weights):
@@ -83,6 +83,7 @@ if __name__ == "__main__":
     if cmd == "upload":
         upload(sys.argv[2], sys.argv[3:])
     elif cmd == "run":
-        run(sys.argv[2], sys.argv[3:])
+        ks = [a.split("=", 1)[1].split(",") for a in sys.argv[3:] if a.startswith("--sources=")]
+        run(sys.argv[2], [a for a in sys.argv[3:] if not a.startswith("--")], ks[0] if ks else (), cpu="--cpu" in sys.argv)
     elif cmd == "fetch":
         fetch(sys.argv[2], "--weights" in sys.argv)

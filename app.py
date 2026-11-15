@@ -14,8 +14,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "pip
 from explain import explain
 from textnorm import normalize
 
-RUN = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("SAQBOL_RUN", "runs/FINAL")
-cfg = json.load(open(f"{RUN}/final_report.json")) if os.path.exists(f"{RUN}/final_report.json") else {}
+RUN = sys.argv[1] if len(sys.argv) > 1 else os.environ.get("SAQBOL_RUN", "runs/ens_v7_e5x4_logit_z")
+_rep = next((f"{RUN}/{n}" for n in ["final_report.json", "final_report_testB.json"] if os.path.exists(f"{RUN}/{n}")), None)
+cfg = json.load(open(_rep)) if _rep else {}
 THR, THR_LOW = cfg.get("thr_scam", 0.5), cfg.get("thr_suspicious", 0.2)
 run_cfg = json.load(open(f"{RUN}/config.json")) if os.path.exists(f"{RUN}/config.json") else {}
 dev = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
@@ -34,7 +35,7 @@ for m in run_cfg.get("members", [RUN]):
     mc = json.load(open(f"{m}/config.json"))
     tok = AutoTokenizer.from_pretrained(f"{m}/best")
     tok.truncation_side = "left"  # calls: keep the latest turns, where the ask usually is
-    mod = AutoModelForSequenceClassification.from_pretrained(f"{m}/best").to(dev).eval()
+    mod = AutoModelForSequenceClassification.from_pretrained(f"{m}/best", dtype=torch.float16 if dev != "cpu" else torch.float32).to(dev).eval()
     ref, mu, sd = None, 0.0, 1.0
     if "members" in run_cfg:  # chat-dev reference scores: same normalisation as pipeline/src/ensemble.py
         pr = pd.read_json(f"{m}/preds.jsonl", lines=True)

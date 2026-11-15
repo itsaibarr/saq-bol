@@ -1,0 +1,156 @@
+{"id": "kk3_001", "self_contained": "maybe", "why": "coercive advice to sell property, no explicit request"}
+{"id": "kk3_004", "self_contained": "yes", "why": "asks for bank card in exchange for pay (mule)"}
+{"id": "kk3_005", "self_contained": "maybe", "why": "bare 'suspicious operation' alarm, no request"}
+{"id": "kk3_006", "self_contained": "yes", "why": "promises to multiply money and get flat"}
+{"id": "kk3_007", "self_contained": "yes", "why": "promises to multiply funds via investing"}
+{"id": "kk3_008", "self_contained": "no", "why": "neutral 'I am your boss' opener"}
+{"id": "kk3_009", "self_contained": "no", "why": "neutral 'is this you?' opener"}
+{"id": "kk3_010", "self_contained": "yes", "why": "code request with threat of losing money"}
+{"id": "kk3_011", "self_contained": "maybe", "why": "'sent you money by mistake' hook, no request yet"}
+{"id": "kk3_012", "self_contained": "yes", "why": "lawyer demands 2M via courier, keep phone on"}
+{"id": "kk3_013", "self_contained": "yes", "why": "asks for 4-digit SMS code"}
+{"id": "kk3_014", "self_contained": "yes", "why": "parcel pretext with urgency and storage fee"}
+{"id": "kk3_015", "self_contained": "yes", "why": "transfer to 'safe account'"}
+{"id": "kk3_016", "self_contained": "maybe", "why": "implied blackmail threat, no request"}
+{"id": "kk3_018", "self_contained": "maybe", "why": "bare alarm: loan being issued in your name"}
+{"id": "kk3_019", "self_contained": "yes", "why": "'we will move funds to a safe place' trope"}
+{"id": "kk3_023", "self_contained": "maybe", "why": "bare alarm: EDS issued in your name"}
+{"id": "kk3_024", "self_contained": "no", "why": "bare money request, could be family"}
+{"id": "kk3_025", "self_contained": "maybe", "why": "'is this you in the photo' lure without link"}
+{"id": "kk3_026", "self_contained": "maybe", "why": "bare alarm: power of attorney issued"}
+{"id": "kk3_027", "self_contained": "yes", "why": "urgent demand for documents and money"}
+{"id": "kk3_028", "self_contained": "no", "why": "ordinary seminar invitation"}
+{"id": "kk3_029", "self_contained": "maybe", "why": "urgent data-breach alarm, no request"}
+{"id": "kk3_030", "self_contained": "no", "why": "generic 'you'll miss the chance' fragment"}
+{"id": "kk3_032", "self_contained": "maybe", "why": "offer to help get driving licence, ambiguous"}
+{"id": "kk3_033", "self_contained": "maybe", "why": "official-style missed-deadline alarm, no request"}
+{"id": "kk3_034", "self_contained": "maybe", "why": "study-abroad admission promise, could be agency"}
+{"id": "kk3_035", "self_contained": "maybe", "why": "urgent hotel confirmation, no link"}
+{"id": "kk3_036", "self_contained": "yes", "why": "promises to multiply invested money"}
+{"id": "kk3_037", "self_contained": "yes", "why": "urgent demand to deposit money"}
+{"id": "kk3_038", "self_contained": "yes", "why": "loan guaranteed even if bank refuses"}
+{"id": "kk3_039", "self_contained": "maybe", "why": "pressure/threat of loss, no request"}
+{"id": "kk3_040", "self_contained": "no", "why": "bare urgent money request, family-like"}
+{"id": "kk3_041", "self_contained": "no", "why": "ordinary vote request"}
+{"id": "kk3_042", "self_contained": "no", "why": "ordinary vote request"}
+{"id": "kk3_043", "self_contained": "maybe", "why": "single job-placement fixer promise"}
+{"id": "kk3_044", "self_contained": "maybe", "why": "military summons notice, could be genuine"}
+{"id": "kk3_045", "self_contained": "maybe", "why": "official accusation, no request"}
+{"id": "kk3_046", "self_contained": "yes", "why": "link + fine threat"}
+{"id": "kk3_047", "self_contained": "yes", "why": "string of fixer promises (job, flat, land)"}
+{"id": "kk3_048", "self_contained": "maybe", "why": "parcel + SIM-expiry pretext, no explicit ask"}
+{"id": "kk3_049", "self_contained": "maybe", "why": "loan broker offer"}
+{"id": "kk3_050", "self_contained": "maybe", "why": "bare virus alarm"}
+{"id": "kk3_051", "self_contained": "maybe", "why": "urgent update, no link"}
+{"id": "kk3_052", "self_contained": "yes", "why": "asks for SMS code"}
+{"id": "kk3_053", "self_contained": "yes", "why": "asks for SMS code"}
+{"id": "kk3_054", "self_contained": "yes", "why": "asks to install module"}
+{"id": "kk3_055", "self_contained": "maybe", "why": "bare account-risk alarm"}
+{"id": "kk3_056", "self_contained": "maybe", "why": "bare fraud alarm"}
+{"id": "kk3_057", "self_contained": "yes", "why": "bank manager says move savings"}
+{"id": "kk3_058", "self_contained": "yes", "why": "prize requiring upfront transfer"}
+{"id": "kk3_059", "self_contained": "yes", "why": "transfer deposit to their account"}
+{"id": "kk3_060", "self_contained": "yes", "why": "link + compensation payout"}
+{"id": "kk3_061", "self_contained": "yes", "why": "unsolicited state-benefit payout lure"}
+{"id": "kk3_062", "self_contained": "yes", "why": "enter IIN to check payouts"}
+{"id": "kk3_064", "self_contained": "yes", "why": "many fixer promises incl. tenders, cheap loans"}
+{"id": "kk3_065", "self_contained": "yes", "why": "fake relative, hand cash to courier"}
+{"id": "kk3_066", "self_contained": "yes", "why": "multiple fixer promises"}
+{"id": "kk3_067", "self_contained": "yes", "why": "multiple fixer promises"}
+{"id": "kk3_068", "self_contained": "maybe", "why": "flat offer, could be realtor"}
+{"id": "kk3_069", "self_contained": "maybe", "why": "fast licence fixer promise"}
+{"id": "kk3_070", "self_contained": "yes", "why": "promises to multiply money on exchange"}
+{"id": "kk3_071", "self_contained": "yes", "why": "'I have connections', land legalisation fixer"}
+{"id": "kk3_072", "self_contained": "maybe", "why": "single job fixer promise (KNB)"}
+{"id": "kk3_073", "self_contained": "yes", "why": "transfer to 'safe account'"}
+{"id": "kk3_074", "self_contained": "maybe", "why": "bare deposit-risk alarm"}
+{"id": "kk3_075", "self_contained": "yes", "why": "urgent push to sell flat"}
+{"id": "kk3_076", "self_contained": "yes", "why": "asks to relay SMS"}
+{"id": "kk3_077", "self_contained": "maybe", "why": "bare hacking alarm"}
+{"id": "kk3_079", "self_contained": "maybe", "why": "'your son is with us' pressure, no request"}
+{"id": "kk3_080", "self_contained": "maybe", "why": "offers to hack spouse WhatsApp"}
+{"id": "kk3_082", "self_contained": "maybe", "why": "cheap car fixer offer"}
+{"id": "kk3_083", "self_contained": "no", "why": "ordinary goods-delivery offer"}
+{"id": "kk3_084", "self_contained": "yes", "why": "asks for sent code"}
+{"id": "kk3_085", "self_contained": "no", "why": "ordinary sales talk"}
+{"id": "kk3_086", "self_contained": "maybe", "why": "bare suspicious-operations alarm"}
+{"id": "kk3_088", "self_contained": "yes", "why": "asks to take 'mirror loan'"}
+{"id": "kk3_090", "self_contained": "maybe", "why": "generic registration link"}
+{"id": "kk3_091", "self_contained": "maybe", "why": "bare account-risk alarm"}
+{"id": "kk3_092", "self_contained": "yes", "why": "promises 41% returns"}
+{"id": "kk3_093", "self_contained": "maybe", "why": "police-search pressure, no request"}
+{"id": "kk3_095", "self_contained": "no", "why": "ordinary blood-donation booking"}
+{"id": "kk3_096", "self_contained": "yes", "why": "code request, keep phone on"}
+{"id": "kk3_097", "self_contained": "yes", "why": "official impersonation, pressure to contact/file"}
+{"id": "kk3_098", "self_contained": "maybe", "why": "isolation instruction, ambiguous"}
+{"id": "kk3_099", "self_contained": "maybe", "why": "pressure, no request"}
+{"id": "kk3_101", "self_contained": "yes", "why": "promises 10x returns"}
+{"id": "kk3_102", "self_contained": "maybe", "why": "generic bitcoin earnings claim"}
+{"id": "kk3_103", "self_contained": "yes", "why": "unsolicited prize: house"}
+{"id": "kk3_104", "self_contained": "yes", "why": "30k becomes 300k"}
+{"id": "kk3_105", "self_contained": "maybe", "why": "money request to third-party card, could be family"}
+{"id": "kk3_106", "self_contained": "no", "why": "bare money request"}
+{"id": "kk3_107", "self_contained": "no", "why": "bare 'really need it'"}
+{"id": "kk3_108", "self_contained": "yes", "why": "asks app install and code"}
+{"id": "kk3_109", "self_contained": "maybe", "why": "alarm, no request"}
+{"id": "kk3_110", "self_contained": "maybe", "why": "bank-style loan check question"}
+{"id": "kk3_111", "self_contained": "maybe", "why": "caller coaching password reset and SMS entry"}
+{"id": "kk3_112", "self_contained": "maybe", "why": "caller coaching biometric check"}
+{"id": "kk3_113", "self_contained": "maybe", "why": "caller dictates password, says stay out of app"}
+{"id": "kk3_114", "self_contained": "yes", "why": "asks for SMS code"}
+{"id": "kk3_115", "self_contained": "yes", "why": "asks for SMS code after loan alarm"}
+{"id": "kk3_116", "self_contained": "maybe", "why": "instructs ATM withdraw and redeposit"}
+{"id": "kk3_117", "self_contained": "maybe", "why": "bank caller bare alarm"}
+{"id": "kk3_118", "self_contained": "yes", "why": "transfer to 'insurance agent' safe cell"}
+{"id": "kk3_119", "self_contained": "yes", "why": "bank caller, install app under pressure"}
+{"id": "kk3_120", "self_contained": "maybe", "why": "app-download push, object unclear"}
+{"id": "kk3_121", "self_contained": "yes", "why": "pressure to visit realtor, fake protection"}
+{"id": "kk3_122", "self_contained": "yes", "why": "coaches staged house sale"}
+{"id": "kk3_123", "self_contained": "yes", "why": "withdraw and send to their account"}
+{"id": "kk3_124", "self_contained": "yes", "why": "enter personal data to block ops"}
+{"id": "kk3_127", "self_contained": "yes", "why": "pressure to pre-emptively take loan"}
+{"id": "kk3_128", "self_contained": "yes", "why": "card for crypto earnings"}
+{"id": "kk3_129", "self_contained": "yes", "why": "mule payout share"}
+{"id": "kk3_130", "self_contained": "yes", "why": "asks for card for money"}
+{"id": "kk3_131", "self_contained": "yes", "why": "collect students' cards for profit"}
+{"id": "kk3_132", "self_contained": "no", "why": "neutral loan question"}
+{"id": "kk3_133", "self_contained": "yes", "why": "push to take loans from all banks"}
+{"id": "kk3_134", "self_contained": "maybe", "why": "university grant admission fixer"}
+{"id": "kk3_136", "self_contained": "maybe", "why": "'guaranteed' fixer, object unknown"}
+{"id": "kk3_137", "self_contained": "yes", "why": "promises multiplied returns"}
+{"id": "kk3_138", "self_contained": "yes", "why": "'safe account' transfer"}
+{"id": "kk3_139", "self_contained": "maybe", "why": "pension alarm, no request"}
+{"id": "ru3_001", "self_contained": "no", "why": "ordinary discount sales talk"}
+{"id": "ru3_003", "self_contained": "maybe", "why": "'tagged in photo' lure without link"}
+{"id": "ru3_005", "self_contained": "no", "why": "ordinary flower delivery"}
+{"id": "ru3_006", "self_contained": "maybe", "why": "mentions sending code, no ask"}
+{"id": "ru3_008", "self_contained": "no", "why": "ordinary 'can't talk'"}
+{"id": "ru3_009", "self_contained": "maybe", "why": "bare EDS-expiry alarm"}
+{"id": "ru3_013", "self_contained": "yes", "why": "show bank app on video call"}
+{"id": "ru3_014", "self_contained": "yes", "why": "biometrics to cancel operation"}
+{"id": "ru3_015", "self_contained": "yes", "why": "install app to protect money"}
+{"id": "ru3_016", "self_contained": "maybe", "why": "implied blackmail, no request"}
+{"id": "ru3_017", "self_contained": "maybe", "why": "bare debit alarm"}
+{"id": "ru3_018", "self_contained": "maybe", "why": "'bank security' opener, no request"}
+{"id": "ru3_019", "self_contained": "maybe", "why": "pressure, no request"}
+{"id": "ru3_020", "self_contained": "yes", "why": "unsolicited recalculation payout"}
+{"id": "ru3_021", "self_contained": "yes", "why": "asks full card number"}
+{"id": "ru3_022", "self_contained": "yes", "why": "unsolicited ENPF payout"}
+{"id": "ru3_023", "self_contained": "yes", "why": "unsolicited pension recalculation"}
+{"id": "ru3_024", "self_contained": "yes", "why": "pension change, confirm data"}
+{"id": "ru3_025", "self_contained": "yes", "why": "unsolicited USSR-tenure compensation"}
+{"id": "ru3_026", "self_contained": "yes", "why": "unsolicited pension refund"}
+{"id": "ru3_027", "self_contained": "maybe", "why": "delivery-failed, no link"}
+{"id": "ru3_028", "self_contained": "maybe", "why": "meter access request, ambiguous"}
+{"id": "ru3_029", "self_contained": "no", "why": "harmless romantic line"}
+{"id": "ru3_030", "self_contained": "yes", "why": "too-good iPhone offer, urgency"}
+{"id": "ru3_031", "self_contained": "yes", "why": "urgency + free gifts"}
+{"id": "ru3_032", "self_contained": "maybe", "why": "clickbait"}
+{"id": "ru3_033", "self_contained": "yes", "why": "SIM pretext, dictate SMS code"}
+{"id": "ru3_034", "self_contained": "yes", "why": "EDS expiry, press 1"}
+{"id": "ru3_035", "self_contained": "maybe", "why": "loan alarm pressure, no request"}
+{"id": "ru3_036", "self_contained": "yes", "why": "isolation: distrust anyone stopping you"}
+{"id": "ru3_037", "self_contained": "yes", "why": "promises 4x return in a week"}
+{"id": "ru3_038", "self_contained": "no", "why": "ordinary order notice"}
+{"id": "ru3_039", "self_contained": "no", "why": "neutral clinic opener"}
+{"id": "ru3_040", "self_contained": "maybe", "why": "urgent transfer, 'explain later'"}

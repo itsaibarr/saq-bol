@@ -22,6 +22,8 @@ ap.add_argument("--tg-spam-cap", type=int, default=1500)
 ap.add_argument("--drop-pound", type=int, default=0)
 ap.add_argument("--hfkk-frac", type=float, default=1.0)
 ap.add_argument("--ru-rf", type=int, default=0)  # real Russian-language scam texts from non-KZ sources (training only)
+ap.add_argument("--real-train-split", default="")  # A6: e.g. real_test -> spent test items become training rows
+ap.add_argument("--real-weight", type=int, default=4)
 ap.add_argument("--notif", type=int, default=0)  # rule-based legit service notifications
 ap.add_argument("--hf-cap", type=int, default=8000)  # max rows per language from hf_extra  # add single-clause clips of synthetic messages  # A2: dropped (noisy NLLB, US content)
 args = ap.parse_args()
@@ -134,6 +136,17 @@ if args.ru_rf:
         r = json.loads(ln)
         add(r["text"], r["label"] == "scam", "ru", "ru_rf_real", r.get("scheme"), group=f"rurf:{i}")
 
+# 9. A6: spent real items as training rows (descriptions dropped; fragments only if blind-tagged recognizable)
+real_train_ids = set()
+if args.real_train_split:
+    _r = pd.read_json("data/processed/real_all.jsonl", lines=True)
+    _r = _r[_r.split == args.real_train_split]
+    for _, x in _r.iterrows():
+        if x.unit == "description" or (x.unit == "fragment" and x.get("self_contained") not in ("yes", "maybe")):
+            continue
+        add(x.text, x.label == "scam", x.language, f"real_{args.real_train_split}", x.get("scheme"), group=f"real:{x.id}")
+        real_train_ids.add(x.id)
+
 # 7. Rule-based legit service notifications (bank OTP/transactions, eGov, delivery, telecom, civil defence)
 if args.notif:
     for i, ln in enumerate(open("data/processed/notif_synth.jsonl")):
@@ -160,6 +173,8 @@ def grams(s, n=5):
     s = re.sub(r"\s+", " ", s.lower())
     return {s[i:i + n] for i in range(max(1, len(s) - n + 1))}
 real = pd.read_json("data/processed/real_all.jsonl", lines=True)
+if args.real_train_split:
+    real = real[real.split != args.real_train_split]  # protect only items still held out
 rg = [grams(x) for x in real.text]
 def leaks(s):
     g = grams(s)
@@ -207,7 +222,7 @@ if args.clips:
 # train / val split by group (val = 12% of groups)
 groups = sorted(df.group.unique()); rng.shuffle(groups)
 val_groups = set(groups[: int(0.12 * len(groups))])
-df["split"] = df.group.map(lambda g: "val" if g in val_groups else "train")
+df["split"] = df.group.map(lambda g: "val" if g in val_groups and not str(g).startswith("real:") else "train")
 
 # Keyboard-Kazakh augmentation (train only): folded copy of 60% of Kazakh rows
 if args.kbd_aug:
@@ -218,6 +233,9 @@ if args.kbd_aug:
     aug["source"] = aug.source + "+kbd_aug"
     df = pd.concat([df, aug], ignore_index=True).drop_duplicates("text")
 
+if args.real_train_split and args.real_weight > 1:
+    _rr = df[(df.split == "train") & df.source.astype(str).str.startswith("real_")]
+    df = pd.concat([df] + [_rr] * (args.real_weight - 1), ignore_index=True)
 import os
 os.makedirs(args.out, exist_ok=True)
 df[df.split == "train"].to_json(f"{args.out}/train.jsonl", orient="records", lines=True, force_ascii=False)

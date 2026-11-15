@@ -1,0 +1,10 @@
+{
+ "mix": "data/processed/mix_v7",
+ "members": [
+  "runs/kg_e5L_v7_s1",
+  "runs/kg_e5L_v7_s2",
+  "runs/kg_e5L_v7_s3",
+  "runs/kg_e5L_v7_s4"
+ ],
+ "method": "logit_z"
+}
