@@ -2,7 +2,7 @@
 
 **Track:** Finance · **Team:** TBD · *This project is a prototype and is not financial advice.*
 
-**On 151 real Kazakhstan scam texts set aside before this model was trained (test C), the final model catches 90% (136; one fewer would be 89%): Russian 91% [84, 95] of 103, Kazakh 88% [75, 94] of 48. It flagged 5 of 1,978 held-out everyday chat messages (0.25%). The previous version caught 80% of the same texts (Russian 84%, Kazakh 73%).**
+**On 151 real Kazakhstan scam texts set aside before this model was trained (test C), the final model catches 90% (136; one fewer would be 89%): Russian 91% [84, 95] of 103, Kazakh 88% [75, 94] of 48. It flagged 5 of 1,978 held-out everyday chat messages (0.25%). The previous version caught 80% of the same texts (Russian 83%, Kazakh 73%).**
 
 ![Test C: version 2 vs version 3](reports/figures/fig_testC_v2_v3.png)
 
@@ -12,7 +12,7 @@ Gulnara apa is 67, lives in Astana and speaks Kazakh first. A call comes in: "Ka
 
 ## What we built
 
-Paste a message, or a call transcript with one line per turn. The model returns a risk band (scam, suspicious, no clear signs), highlights the phrase that drove the score, lists red flags from the official keyword list, and gives one action in Kazakh or Russian ("Қоңырауды үзіңіз. Банкке картаның артындағы не ресми қосымшадағы нөмір арқылы өзіңіз хабарласыңыз."). Call mode re-scores after each turn; it is a demo only, since we had no real call transcripts to test on. Run: `python app.py` with the model file in `runs/kg_e5L_v8b_s1/best/` (1.1 GB, not in this repo; available on request). The notebook shows every result without it. On a Mac the demo made the same decision as the evaluated model on all 406 test-C texts we checked.
+Paste a message, or a call transcript with one line per turn. The model returns a risk band (scam, suspicious, no clear signs), highlights the phrase that drove the score, lists red flags from the official keyword list, and gives one action in Kazakh or Russian ("Қоңырауды үзіңіз. Банкке картаның артындағы не ресми қосымшадағы нөмір арқылы өзіңіз хабарласыңыз."). Call mode re-scores after each turn; it is a demo only, since we had no real call transcripts to test on. Run: `python app.py` with the model file in `runs/kg_e5L_v8b_s1/best/` (1.1 GB, not in this repo; available on request). The notebook shows every result without it. On a Mac the demo made the same decision as the evaluated model on all 306 test-C texts and 100 everyday chat lines we checked.
 
 ## What we added
 
@@ -36,12 +36,12 @@ Model: one `multilingual-e5-large` fine-tune (Kaggle T4, 2 epochs). Version 2 av
 
 | Model | Scams caught (151) | Russian (103) | Kazakh (48) | Russian, outside Kazakhstan (76) | Everyday chat flagged | Official and bank texts flagged (46) |
 |---|---|---|---|---|---|---|
-| Version 2 | 80% [73, 86] | 84% | 73% | 75% | 0.05% | 4% (2) |
+| Version 2 | 80% [73, 86] | 83% | 73% | 75% | 0.05% | 4% (2) |
 | **Version 3 (final)** | **90% [84, 94]** | **91% [84, 95]** | **88% [75, 94]** | **88% [79, 94]** | **0.25%** | **7% (3)** |
 
-On the same 151 scams, version 3 caught 16 that version 2 missed and version 2 caught 1 that version 3 missed (McNemar p = 0.0003); outside Kazakhstan, 10 vs 0 (p = 0.002). On scams a blind AI annotator tagged recognizable or maybe recognizable from the text alone, version 3 catches 95% (Russian 98%, Kazakh 90%). The Russian set from outside Kazakhstan (Russia, Belarus, Kyrgyzstan, Uzbekistan, Moldova) comes from publishers never used in training. Kazakh gained more than Russian on the same texts (+15 vs +7 points), so much of the gain likely comes from test B's 93 Kazakh scams joining training, not only from the Russian data.
+On the same 151 scams, version 3 caught 16 that version 2 missed and version 2 caught 1 that version 3 missed (McNemar p = 0.0003); outside Kazakhstan, 10 vs 0 (p = 0.002). On scams a blind AI annotator tagged recognizable or maybe recognizable from the text alone, version 3 catches 95% (Russian 98%, Kazakh 90%). The Russian set from outside Kazakhstan (Russia, Belarus, Kyrgyzstan, Uzbekistan, Moldova) comes from publishers never used in training. Kazakh gained more than Russian on the same texts (+15 vs +8 points), so much of the gain likely comes from test B's 93 Kazakh scams joining training, not only from the Russian data.
 
-Two test-C items are questionable. One Kazakh "scam" is ordinary bank-warning wording (without it: 90.0%, Kazakh 87%). One Russian item from outside Kazakhstan nearly appears inside a longer training quote (without it: 88.0%).
+Two test-C items are questionable. One Kazakh "scam" is ordinary bank-warning wording (without it: 90.0%, Kazakh 87%). One Russian item from outside Kazakhstan nearly appears inside a longer training quote (without it, recall outside Kazakhstan is 88.0%, 66 of 75; the 151-text headline does not include it).
 
 We aimed for 90% in both languages. Russian's point estimate reached it (91%); Kazakh's did not (88%, 48 texts). Neither interval rules out a true rate below 90%.
 
@@ -57,14 +57,14 @@ We aimed for 90% in both languages. Russian's point estimate reached it (91%); K
 
 \*At its own setting (any red flag).
 
-Numbers from different test sets are not comparable: version 2 scored 84% on test C's Russian but 65% on test B's, which had more short call lines. Compare versions only within one test set.
+Numbers from different test sets are not comparable: version 2 scored 83% on test C's Russian but 65% on test B's, which had more short call lines. Compare versions only within one test set.
 
 ## Where it fails
 
 - **Call openers with no scam signal.** Version 3 misses lines like "На сколько лет вы хотите продлить?" and "Мы меняем ключи от домофона, вам два ключа?"; they only become scams later in the call. Both versions flag some neutral delivery lines that real couriers also send ("На ваше имя пришла посылка. Будете получать?"), and version 3 adds more ("курьер не смог доставить заказ"). 7 of version 3's 16 extra catches are lines a blind annotator could not recognise as scams from the text alone, so part of the gain comes from flagging more readily. Test C has no legit call lines, so false alarms on real couriers asking for an SMS code are not measured.
-- **Service SMS false alarms are still not measured on fresh data.** Test C has only 10 real SMS: 0 of 4 Kazakhstan SMS flagged, 2 of 6 from outside flagged ("Назовите сотруднику этот код, чтобы получить наличные в кассе" and the parcel-code SMS "12345 Сообщите код оператору для получения одного отправления"; version 2 flagged both too). Version 1 flagged 14.5% of real service SMS on test A.
+- **Service SMS false alarms are still not measured on fresh data.** Test C has only 10 real SMS: 0 of 4 Kazakhstan SMS flagged (one is a courier-code SMS, "Сообщите код курьеру после получения товара"), 2 of 6 from outside flagged ("Назовите сотруднику этот код, чтобы получить наличные в кассе" and the parcel-code SMS "12345 Сообщите код оператору для получения одного отправления"; version 2 flagged both too). Version 1 flagged 14.5% of real service SMS on test A.
 - **More chat false alarms than version 2:** 5 of 1,978 vs 1 (inside the 1% limit; p = 0.125; the same chat lines as tests A and B). One of the 5 may be a real scam: an offer to rent out an account for 5,000 tenge.
-- **Keyboard Kazakh** costs 4 points on test C (87.5% to 83.3%, 48 texts with letters replaced by script, p = 0.5); version 2 lost 6 points on the same texts (73% to 67%). Test C has no real keyboard-typed or mixed Kazakh-Russian scams.
+- **Keyboard Kazakh** costs 4 points on test C (87.5%, the 88% above, to 83.3%; 48 texts, p = 0.5). The letters were replaced by the same letter map we used on 8,471 training rows, so this is a best case; real typing varies (і as и or ы, mixed words). Version 2 lost 6 points on the same texts (73% to 67%). Test C has no real keyboard-typed or mixed Kazakh-Russian scams.
 
 ![Keyboard Kazakh](reports/figures/fig_keyboard_kazakh_testC.png)
 

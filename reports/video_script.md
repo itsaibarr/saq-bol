@@ -15,7 +15,7 @@ Record the screen with QuickTime (File > New Screen Recording) while `python app
 # 5-minute finals plan
 - 0:00-0:40 Gulnara, the moment of the call, the regulator's 7 questions (since 1 Oct 2026).
 - 0:40-2:40 Live app: Kazakh scam, the same text in keyboard Kazakh, the OTP SMS staying safe, call mode, the real bank-SMS false alarm. Run locally with models preloaded; keep the video and Colab as backup.
-- 2:40-3:50 How the test sets were built (1,301 texts, 720 pages, verbatim, URL + date), leakage drops, why the bank-SMS rule exists, the falsified predictions, the baseline chart, and the v2-to-v3 step on a fresh test set (80% to 90%, Russian 84% to 91%, p = 0.0003).
+- 2:40-3:50 How the test sets were built (1,301 texts, 720 pages, verbatim, URL + date), leakage drops, why the bank-SMS rule exists, the falsified predictions, the baseline chart, and the v2-to-v3 step on a fresh test set (80% to 90%, Russian 83% to 91%, p = 0.0003).
 - 3:50-4:30 Fairness: Kazakh vs Russian on the same test set (88% vs 91%); keyboard Kazakh -4 points for v3 on test C; Russian outside Kazakhstan 88% from publishers never used in training.
 - 4:30-5:00 Impact and next steps (speech-to-text, volunteer SMS calibration, a phone-sized model).
 
